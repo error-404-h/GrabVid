@@ -1,0 +1,1953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+<meta property="og:title" content="أفضل اداة تحميل من كل المنصات">
+<meta property="og:description" content="أداة سريعة لتحميل الفيديوهات MP4 و MP3">
+<meta property="og:image" content="https://error12345.alwaysdata.net/gn/preview.png">
+<meta property="og:url" content="https://error12345.alwaysdata.net/gn/index.html">
+<meta name="twitter:card" content="summary_large_image">
+    <title>GrabVid — Download Videos & Audio from Any Platform</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-alt: #f1f5f9;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --text: #0f172a;
+            --muted: #64748b;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #2563eb, #0ea5e9);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --radius: 1.2rem;
+            --transition: 0.3s ease;
+            --icon-color: #2563eb;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+            --card-hover: rgba(37,99,235,0.05);
+            --feature-bg: #eff6ff;
+            --feature-icon-bg: #eff6ff;
+        }
+        body.theme-dark {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-alt: #334155;
+            --border: #334155;
+            --border-hover: #475569;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #06b6d4;
+            --accent: #f43f5e;
+            --gradient: linear-gradient(135deg, #3b82f6, #06b6d4);
+            --shadow: 0 4px 15px rgba(0,0,0,0.3);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.5);
+            --icon-color: #3b82f6;
+            --nav-bg: rgba(15,23,42,0.85);
+            --hero-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            --card-hover: rgba(59,130,246,0.05);
+            --feature-bg: #1e293b;
+            --feature-icon-bg: #1e293b;
+        }
+        body.theme-emerald {
+            --bg: #ecfdf5;
+            --surface: #ffffff;
+            --surface-alt: #d1fae5;
+            --border: #a7f3d0;
+            --border-hover: #6ee7b7;
+            --text: #064e3b;
+            --muted: #047857;
+            --primary: #059669;
+            --primary-dark: #047857;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --gradient: linear-gradient(135deg, #059669, #10b981);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #059669;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #d1fae5 0%, #ecfdf5 100%);
+            --card-hover: rgba(5,150,105,0.05);
+            --feature-bg: #d1fae5;
+            --feature-icon-bg: #d1fae5;
+        }
+        body.theme-purple {
+            --bg: #faf5ff;
+            --surface: #ffffff;
+            --surface-alt: #f3e8ff;
+            --border: #e9d5ff;
+            --border-hover: #d8b4fe;
+            --text: #3b0764;
+            --muted: #7e22ce;
+            --primary: #9333ea;
+            --primary-dark: #7e22ce;
+            --secondary: #a855f7;
+            --accent: #ec4899;
+            --gradient: linear-gradient(135deg, #9333ea, #a855f7);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #9333ea;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #f3e8ff 0%, #faf5ff 100%);
+            --card-hover: rgba(147,51,234,0.05);
+            --feature-bg: #f3e8ff;
+            --feature-icon-bg: #f3e8ff;
+        }
+        body.theme-sunset {
+            --bg: #fff7ed;
+            --surface: #ffffff;
+            --surface-alt: #ffedd5;
+            --border: #fed7aa;
+            --border-hover: #fdba74;
+            --text: #431407;
+            --muted: #9a3412;
+            --primary: #ea580c;
+            --primary-dark: #c2410c;
+            --secondary: #f97316;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #ea580c, #f97316);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #ea580c;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #ffedd5 0%, #fff7ed 100%);
+            --card-hover: rgba(234,88,12,0.05);
+            --feature-bg: #ffedd5;
+            --feature-icon-bg: #ffedd5;
+        }
+        body.theme-ocean {
+            --bg: #e0f2fe;
+            --surface: #ffffff;
+            --surface-alt: #bae6fd;
+            --border: #7dd3fc;
+            --border-hover: #38bdf8;
+            --text: #0c4a6e;
+            --muted: #0369a1;
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary: #0ea5e9;
+            --accent: #f43f5e;
+            --gradient: linear-gradient(135deg, #0284c7, #0ea5e9);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #0284c7;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 100%);
+            --card-hover: rgba(2,132,199,0.05);
+            --feature-bg: #bae6fd;
+            --feature-icon-bg: #bae6fd;
+        }
+        body.theme-rose {
+            --bg: #fff1f2;
+            --surface: #ffffff;
+            --surface-alt: #ffe4e6;
+            --border: #fecdd3;
+            --border-hover: #fda4af;
+            --text: #881337;
+            --muted: #9f1239;
+            --primary: #e11d48;
+            --primary-dark: #be123c;
+            --secondary: #f43f5e;
+            --accent: #fb7185;
+            --gradient: linear-gradient(135deg, #e11d48, #f43f5e);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #e11d48;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #ffe4e6 0%, #fff1f2 100%);
+            --card-hover: rgba(225,29,72,0.05);
+            --feature-bg: #ffe4e6;
+            --feature-icon-bg: #ffe4e6;
+        }
+        body.theme-gold {
+            --bg: #fffbeb;
+            --surface: #ffffff;
+            --surface-alt: #fef3c7;
+            --border: #fde68a;
+            --border-hover: #fcd34d;
+            --text: #78350f;
+            --muted: #92400e;
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --secondary: #f59e0b;
+            --accent: #dc2626;
+            --gradient: linear-gradient(135deg, #d97706, #f59e0b);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #d97706;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #fef3c7 0%, #fffbeb 100%);
+            --card-hover: rgba(217,119,6,0.05);
+            --feature-bg: #fef3c7;
+            --feature-icon-bg: #fef3c7;
+        }
+        body.theme-midnight {
+            --bg: #1e1b4b;
+            --surface: #312e81;
+            --surface-alt: #4338ca;
+            --border: #4f46e5;
+            --border-hover: #6366f1;
+            --text: #e0e7ff;
+            --muted: #a5b4fc;
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #f472b6;
+            --gradient: linear-gradient(135deg, #818cf8, #a78bfa);
+            --shadow: 0 4px 15px rgba(0,0,0,0.3);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.5);
+            --icon-color: #818cf8;
+            --nav-bg: rgba(30,27,75,0.85);
+            --hero-bg: linear-gradient(180deg, #312e81 0%, #1e1b4b 100%);
+            --card-hover: rgba(129,140,248,0.05);
+            --feature-bg: #312e81;
+            --feature-icon-bg: #312e81;
+        }
+        body.theme-forest {
+            --bg: #f0fdf4;
+            --surface: #ffffff;
+            --surface-alt: #dcfce7;
+            --border: #bbf7d0;
+            --border-hover: #86efac;
+            --text: #14532d;
+            --muted: #166534;
+            --primary: #16a34a;
+            --primary-dark: #15803d;
+            --secondary: #22c55e;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #16a34a, #22c55e);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #16a34a;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #dcfce7 0%, #f0fdf4 100%);
+            --card-hover: rgba(22,163,74,0.05);
+            --feature-bg: #dcfce7;
+            --feature-icon-bg: #dcfce7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s, color 0.3s;
+        }
+        .container {
+            width: 92%;
+            max-width: 1250px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        nav.scrolled {
+            background: var(--nav-bg);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            padding: 0.7rem 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--text);
+        }
+        .nav-cta {
+            background: var(--primary);
+            border: none;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 2;
+        }
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .lang-btn, .theme-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .lang-btn:hover, .theme-btn:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .lang-btn svg, .theme-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--icon-color);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            z-index: 150;
+            transition: right 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            padding: 1.5rem;
+            overflow-y: auto;
+            border-left: 1px solid var(--border);
+        }
+        .mobile-menu.active {
+            right: 0;
+        }
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .mobile-actions {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .mobile-lang-select, .mobile-theme-select {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            cursor: pointer;
+            background: var(--surface-alt);
+        }
+        .hero {
+            padding: 7rem 0 4rem;
+            text-align: center;
+            background: var(--hero-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(37,99,235,0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text);
+        }
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+        .download-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 9999px;
+            padding: 0.3rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .download-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background: transparent;
+            color: var(--text);
+            min-width: 0;
+        }
+        .download-btn {
+            background: var(--gradient);
+            border: none;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .download-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(37,99,235,0.3);
+        }
+        .video-thumbnail {
+            max-width: 200px;
+            max-height: 120px;
+            border-radius: 0.8rem;
+            object-fit: cover;
+            margin: 1rem auto 0;
+            display: none;
+            box-shadow: var(--shadow);
+        }
+        .download-results {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .platform-badge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: border-color 0.3s, transform 0.3s;
+            font-weight: 500;
+        }
+        .platform-badge:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .section {
+            padding: 5rem 0;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+        .section-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.2rem 1.8rem;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--card-hover);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .feature-card:hover::after {
+            opacity: 1;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--feature-icon-bg);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--icon-color);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+        .step-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem 1.8rem;
+            position: relative;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .step-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1.2rem;
+            font-size: 1.2rem;
+        }
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .step-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .supported-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .platform-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            min-width: 140px;
+            justify-content: center;
+        }
+        .platform-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        .platform-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--icon-color);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+        .testimonial-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .testimonial-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .testimonial-author h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .testimonial-author p {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-style: normal;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+        }
+        .faq-question span {
+            transition: transform 0.3s;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--muted);
+            padding: 0 1.5rem;
+            font-size: 0.95rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.2rem;
+        }
+        .cta-section {
+            background: var(--gradient);
+            border-radius: 2rem;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        .cta-btn {
+            background: #fff;
+            color: var(--primary);
+            padding: 0.9rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--text);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 300;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--surface);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .modal-close {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+        .format-option {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+        .format-option:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .format-option span {
+            font-weight: 500;
+        }
+        .download-format-btn {
+            background: var(--gradient);
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
+        }
+        .download-format-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+        }
+        .theme-thumb-preview {
+            width: 100%;
+            height: 100px;
+            background-size: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .theme-card {
+            text-align: center;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .theme-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .theme-card.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .lang-option:hover {
+            background: var(--surface-alt);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+        .blog-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .blog-thumb {
+            height: 160px;
+            background: var(--surface-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .blog-body {
+            padding: 1.5rem;
+        }
+        .blog-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .blog-body p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            background: var(--surface);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item h4 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .stat-item p {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .progress-container {
+            display: none;
+            margin-top: 1rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 0.3rem;
+            box-shadow: var(--shadow);
+        }
+        .progress-bar {
+            height: 20px;
+            background: var(--gradient);
+            border-radius: 9999px;
+            width: 0%;
+            animation: progressAnimation 1.5s ease-in-out infinite;
+        }
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta, .nav-actions {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero {
+                padding: 5.5rem 0 3rem;
+            }
+            .download-form {
+                flex-direction: column;
+                border-radius: 1rem;
+                padding: 0.5rem;
+            }
+            .download-input {
+                padding: 0.8rem 1rem;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.8rem;
+            }
+            .section {
+                padding: 3.5rem 0;
+            }
+            .cta-section {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+        /* تصغير حجم خيارات التحميل */
+.format-option {
+    padding: 0.4rem 0.7rem !important;
+    font-size: 0.8rem !important;
+    gap: 0.5rem !important;
+    border-radius: 0.5rem !important;
+}
+
+.format-option span {
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+}
+
+.download-format-btn {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 0.75rem !important;
+    border-radius: 9999px !important;
+}
+
+.download-format-btn svg {
+    width: 12px !important;
+    height: 12px !important;
+}
+/* زيادة حجم أيقونة اللغة في المودال */
+#languageList .lang-option svg {
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0;
+}
+
+
+.lang-option {
+    gap: 0.8rem !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 0.8rem !important;
+}
+
+
+.lang-btn svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+
+.mobile-lang-select svg,
+.mobile-theme-select svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                GrabVid
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#how-it-works" data-i18n="nav_how">How It Works</a></li>
+                <li><a href="#platforms" data-i18n="nav_platforms">Platforms</a></li>
+                <li><a href="#blog" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-btn" id="langBtn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13v5.5c-.5-.3-1.1-.5-1.8-.5-1.4 0-2.5 1.1-2.5 2.5S7.8 15 9.2 15s2.5-1.1 2.5-2.5V7h3v3h2V7h-5z"/></svg>
+                    <span id="langLabel">English</span>
+                </div>
+                <div class="theme-btn" id="themeBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" style="fill: var(--icon-color);"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 2v14a7 7 0 000-14z"/></svg>
+                    <span data-i18n="theme">Theme</span>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#download" class="nav-cta" data-i18n="nav_download">Download Now</a>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#features" data-i18n="nav_features">Features</a></li>
+            <li><a href="#how-it-works" data-i18n="nav_how">How It Works</a></li>
+            <li><a href="#platforms" data-i18n="nav_platforms">Platforms</a></li>
+            <li><a href="#blog" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="#about" data-i18n="nav_about">About</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <div class="mobile-lang-select" id="mobileLangBtn">
+                <!-- أيقونة عالم (Globe) أكثر وضوحاً -->
+<svg viewBox="0 0 24 24" width="20" height="20" style="fill: var(--icon-color);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span data-i18n="language">Language</span>
+            </div>
+            <div class="mobile-theme-select" id="mobileThemeBtn">
+                <svg viewBox="0 0 24 24" width="18" height="18" style="stroke: var(--icon-color); fill:none; stroke-width:2;"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 2v14a7 7 0 000-14z"/></svg>
+                <span data-i18n="theme">Theme</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="languageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="languageModalClose">&times;</button>
+            <h2 data-i18n="choose_language">Choose Language</h2>
+            <p data-i18n="choose_language_sub">Select your preferred language</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1.5rem;" id="languageList">
+                <div class="lang-option" data-lang="en">🇬🇧 English</div>
+                <div class="lang-option" data-lang="ar">🇸🇦 العربية</div>
+                <div class="lang-option" data-lang="ru">🇷🇺 Русский</div>
+                <div class="lang-option" data-lang="fr">🇫🇷 Français</div>
+                <div class="lang-option" data-lang="es">🇪🇸 Español</div>
+                <div class="lang-option" data-lang="de">🇩🇪 Deutsch</div>
+                <div class="lang-option" data-lang="zh">🇨🇳 中文</div>
+                <div class="lang-option" data-lang="ja">🇯🇵 日本語</div>
+                <div class="lang-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                <div class="lang-option" data-lang="pt">🇵🇹 Português</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="themeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="themeModalClose">&times;</button>
+            <h2 data-i18n="choose_theme">Choose Theme</h2>
+            <p data-i18n="choose_theme_sub">Select your preferred style</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;margin-top:1.5rem;" id="themeList">
+                <div class="theme-card" data-theme="default"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #eff6ff, #2563eb);"></div><span>Default</span></div>
+                <div class="theme-card" data-theme="dark"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #1e293b, #0f172a);"></div><span>Dark</span></div>
+                <div class="theme-card" data-theme="emerald"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #d1fae5, #059669);"></div><span>Emerald</span></div>
+                <div class="theme-card" data-theme="purple"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #f3e8ff, #9333ea);"></div><span>Purple</span></div>
+                <div class="theme-card" data-theme="sunset"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #ffedd5, #ea580c);"></div><span>Sunset</span></div>
+                <div class="theme-card" data-theme="ocean"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #bae6fd, #0284c7);"></div><span>Ocean</span></div>
+                <div class="theme-card" data-theme="rose"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #ffe4e6, #e11d48);"></div><span>Rose</span></div>
+                <div class="theme-card" data-theme="gold"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #fef3c7, #d97706);"></div><span>Gold</span></div>
+                <div class="theme-card" data-theme="midnight"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #312e81, #1e1b4b);"></div><span>Midnight</span></div>
+                <div class="theme-card" data-theme="forest"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #dcfce7, #16a34a);"></div><span>Forest</span></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero" id="download">
+        <div class="container">
+            <h1 data-i18n="hero_title">Download <span>Videos & Audio</span> from Any Platform</h1>
+            <p data-i18n="hero_sub">Paste a link and get your file in high quality. Fast, free, and no registration required.</p>
+            <form class="download-form" id="downloadForm">
+                <input type="url" class="download-input" id="downloadInput" data-i18n-placeholder="placeholder_url" placeholder="Paste video or audio URL here..." required>
+                <button type="submit" class="download-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span data-i18n="download_btn">Download</span>
+                </button>
+            </form>
+            <img class="video-thumbnail" id="videoThumbnail" alt="Video thumbnail">
+
+
+<h3 id="videoTitle" style="margin: 0.5rem 0; font-size: 1.1rem; font-weight: 600; color: var(--text); text-align: center; display: none;"></h3>
+
+<div class="progress-container" id="analysisProgress">
+    <div class="progress-bar" style="animation: progressAnimation 1.5s ease-in-out infinite;"></div>
+    <div class="progress-text" id="analysisText">Analyzing...</div>
+</div>
+<div id="downloadResults" class="download-results" style="display: none;"></div>
+<div class="platforms" id="heroPlatforms">
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M23 12s-2.3 0-3.7-1.5C17.9 9 18 4 18 4s-5 .1-6.5 1.3C10.1 6.5 10 12 10 12H2v2h8v2H2v2h8v2h2v-2h8v-2H12v-2h8v-2h-8s0-4 1-5c.8-.8 3-1 3-1v5.2C16 11.7 14.3 12 12 12z"/></svg><span>YouTube</span></span>
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M12 2.2c3.2 0 3.6.01 4.9.07 1.2.06 2.2.16 3 .43.9.29 1.7.71 2.4 1.4.7.7 1.1 1.5 1.4 2.4.27.8.37 1.8.43 3 .06 1.3.07 1.7.07 4.9s-.01 3.6-.07 4.9c-.06 1.2-.16 2.2-.43 3-.29.9-.71 1.7-1.4 2.4-.7.7-1.5 1.1-2.4 1.4-.8.27-1.8.37-3 .43-1.3.06-1.7.07-4.9.07s-3.6-.01-4.9-.07c-1.2-.06-2.2-.16-3-.43-.9-.29-1.7-.71-2.4-1.4-.7-.7-1.1-1.5-1.4-2.4-.27-.8-.37-1.8-.43-3-.06-1.3-.07-1.7-.07-4.9s.01-3.6.07-4.9c.06-1.2.16-2.2.43-3 .29-.9.71-1.7 1.4-2.4.7-.7 1.5-1.1 2.4-1.4.8-.27 1.8-.37 3-.43C8.4 2.21 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2z"/></svg><span>Instagram</span></span>
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6.1-7zm-1.3 19.4h2L6.5 3.3h-2.2l13.3 17.3z"/></svg><span>X / Twitter</span></span>
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M12.5 2c.4 3.4 1.6 6.4 4 8.8-2.6-.3-5-1.3-7-2.7-1.3-.9-2.3-2-3-3.3-.9-1.7-1.3-3.5-1.5-5.3.5-.1 1-.2 1.5-.2h6zM12 22c-4.4 0-8-3.6-8-8 0-.7.1-1.4.3-2.1C6.4 15.6 10.4 18 12 18c0-1.5-.2-3-.7-4.3-.5-1.3-1.3-2.4-2.3-3.2-1.6-1.2-3.5-1.9-5.4-2-1.4-.1-2.8.1-4.1.6-.7-1.4-1.1-3-1.1-4.6C-2.6 8.3 3.1 22 12 22z"/></svg><span>TikTok</span></span>
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13v5.5c-.5-.3-1.1-.5-1.8-.5-1.4 0-2.5 1.1-2.5 2.5S7.8 15 9.2 15s2.5-1.1 2.5-2.5V7h3v3h2V7h-5z"/></svg><span>SoundCloud</span></span>
+                <span class="platform-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="fill: var(--icon-color)"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.2 13.4l-1.5 1.5-4.2-4.2V8h2v3.7l3.7 3.7zm-6.5-2.6l-2.2 2.2-1.5-1.5v-3h2v2.3z"/></svg><span>Vimeo</span></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag" data-i18n="features_tag">Why GrabVid</div>
+                <h2 data-i18n="features_title">Everything you need in a downloader</h2>
+                <p data-i18n="features_sub">We make saving media simple and accessible on any device.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 data-i18n="feat1_title">Lightning Fast</h3><p data-i18n="feat1_desc">Servers optimized for speed, get your file in seconds.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 15l-3-3m0 0l3-3m-3 3h12M5 21h14a2 2 0 002-2v-4"/></svg></div><h3 data-i18n="feat2_title">High Quality</h3><p data-i18n="feat2_desc">Download in up to 4K video and 320kbps audio.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div><h3 data-i18n="feat3_title">Mobile Friendly</h3><p data-i18n="feat3_desc">Works perfectly on smartphones, tablets, and desktops.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3 data-i18n="feat4_title">Privacy First</h3><p data-i18n="feat4_desc">No tracking, no logs, your links are not stored.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3V9z"/></svg></div><h3 data-i18n="feat5_title">Multi-Format</h3><p data-i18n="feat5_desc">Save as MP4, MP3, WEBM, and more.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div><h3 data-i18n="feat6_title">Universal</h3><p data-i18n="feat6_desc">Supports 100+ platforms and counting.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg></div><h3 data-i18n="feat7_title">No Ads</h3><p data-i18n="feat7_desc">Clean interface without annoying pop-ups.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h3 data-i18n="feat8_title">No Registration</h3><p data-i18n="feat8_desc">Use instantly without creating an account.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/><path d="M12 6v6l4 2"/></svg></div><h3 data-i18n="feat9_title">Batch Downloads</h3><p data-i18n="feat9_desc">Paste multiple links and download them all.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7v10l10 5 10-5V7L12 2z"/></svg></div><h3 data-i18n="feat10_title">Regular Updates</h3><p data-i18n="feat10_desc">We constantly add new platforms and features.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-tag" data-i18n="how_tag">How It Works</div><h2 data-i18n="how_title">Three simple steps</h2><p data-i18n="how_sub">No technical knowledge needed.</p></div>
+            <div class="steps-grid">
+                <div class="step-card reveal"><div class="step-number">1</div><h3 data-i18n="step1_title">Copy Link</h3><p data-i18n="step1_desc">Find the video or audio you want and copy its URL.</p></div>
+                <div class="step-card reveal"><div class="step-number">2</div><h3 data-i18n="step2_title">Paste & Analyze</h3><p data-i18n="step2_desc">Paste the link into GrabVid and wait a second.</p></div>
+                <div class="step-card reveal"><div class="step-number">3</div><h3 data-i18n="step3_title">Download</h3><p data-i18n="step3_desc">Choose format and quality, then download your file.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="platforms">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-tag" data-i18n="plat_tag">Supported Platforms</div><h2 data-i18n="plat_title">Works with your favorite sites</h2><p data-i18n="plat_sub">We cover the most popular video and audio platforms.</p></div>
+            <div class="supported-platforms" id="platformList">
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M23 12s-2.3 0-3.7-1.5C17.9 9 18 4 18 4s-5 .1-6.5 1.3C10.1 6.5 10 12 10 12H2v2h8v2H2v2h8v2h2v-2h8v-2H12v-2h8v-2h-8s0-4 1-5c.8-.8 3-1 3-1v5.2C16 11.7 14.3 12 12 12z"/></svg> YouTube</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6.01 4.9.07 1.2.06 2.2.16 3 .43.9.29 1.7.71 2.4 1.4.7.7 1.1 1.5 1.4 2.4.27.8.37 1.8.43 3 .06 1.3.07 1.7.07 4.9s-.01 3.6-.07 4.9c-.06 1.2-.16 2.2-.43 3-.29.9-.71 1.7-1.4 2.4-.7.7-1.5 1.1-2.4 1.4-.8.27-1.8.37-3 .43-1.3.06-1.7.07-4.9.07s-3.6-.01-4.9-.07c-1.2-.06-2.2-.16-3-.43-.9-.29-1.7-.71-2.4-1.4-.7-.7-1.1-1.5-1.4-2.4-.27-.8-.37-1.8-.43-3-.06-1.3-.07-1.7-.07-4.9s.01-3.6.07-4.9c.06-1.2.16-2.2.43-3 .29-.9.71-1.7 1.4-2.4.7-.7 1.5-1.1 2.4-1.4.8-.27 1.8-.37 3-.43C8.4 2.21 8.8 2.2 12 2.2zm0 4.9a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2z"/></svg> Instagram</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M18.9 1.2h3.7l-8.1 9.3L24 22.8h-7.5l-5.9-7.7-6.7 7.7H.2l8.7-9.9L0 1.2h7.7l5.3 7 6.1-7zm-1.3 19.4h2L6.5 3.3h-2.2l13.3 17.3z"/></svg> X / Twitter</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12.5 2c.4 3.4 1.6 6.4 4 8.8-2.6-.3-5-1.3-7-2.7-1.3-.9-2.3-2-3-3.3-.9-1.7-1.3-3.5-1.5-5.3.5-.1 1-.2 1.5-.2h6zM12 22c-4.4 0-8-3.6-8-8 0-.7.1-1.4.3-2.1C6.4 15.6 10.4 18 12 18c0-1.5-.2-3-.7-4.3-.5-1.3-1.3-2.4-2.3-3.2-1.6-1.2-3.5-1.9-5.4-2-1.4-.1-2.8.1-4.1.6-.7-1.4-1.1-3-1.1-4.6C-2.6 8.3 3.1 22 12 22z"/></svg> TikTok</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13v5.5c-.5-.3-1.1-.5-1.8-.5-1.4 0-2.5 1.1-2.5 2.5S7.8 15 9.2 15s2.5-1.1 2.5-2.5V7h3v3h2V7h-5z"/></svg> SoundCloud</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.2 13.4l-1.5 1.5-4.2-4.2V8h2v3.7l3.7 3.7zm-6.5-2.6l-2.2 2.2-1.5-1.5v-3h2v2.3z"/></svg> Vimeo</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M22.7 2.3c-.4-.5-1.1-.8-1.9-.8-1.5 0-3.4 1-5.2 2.5C13.3 6.3 12 9 11.4 12c-.5 2.4-.3 4.4-1.3 5.5-.6.7-1.5 1-2.5.9-.9-.1-1.7-.7-2-1.6-.3-.9.1-1.9.9-2.5.6-.5 1.5-.6 2.3-.2l.4-1.9c-1.1-.4-2.3-.3-3.4.3-1.4.8-2.3 2.2-2.4 3.8-.1 1.9 1.1 3.6 2.9 4.1 1.5.4 3.2 0 4.4-1.1 1.5-1.3 2-3.5 2.5-5.7.6-2.6 1.3-5 3.2-6.6.9-.8 1.8-1.4 2.6-1.7.9-.3 1.7-.2 2.1.2.4.4.3 1.1-.1 1.9-.3.6-.8 1.3-1.5 2.1-.5.6-1.1 1.2-1.7 1.8-.4.4-.7.8-.9 1.2-.2.4-.3.8-.2 1.1.1.3.3.5.7.6.6.1 1.3-.2 2.1-.9 1.1-1 2.1-2.3 2.6-3.7.6-1.5.7-3 .3-4.1-.3-.8-.8-1.5-1.5-2.1z" transform="scale(0.9) translate(1,1)"/></svg> Facebook</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.3-.1-.8-.2-2.1 0-3 .1-.9.6-3.6.6-3.6s-.2-.3-.2-.9c0-.9.5-1.5 1.1-1.5.5 0 .8.4.8.9 0 .6-.4 1.5-.6 2.3-.2.7.3 1.3 1 1.3 1.2 0 2.1-1.3 2.1-3.1 0-1.6-1.2-2.7-2.8-2.7-1.9 0-3.1 1.4-3.1 2.9 0 .6.2 1.2.5 1.5.1.1.1.2.1.3l-.2.9c0 .1-.1.2-.2.1-1-.5-1.6-1.9-1.6-3.1 0-2.5 1.8-4.8 5.3-4.8 2.8 0 4.9 2 4.9 4.6 0 2.8-1.7 5-4.2 5-0.8 0-1.6-.4-1.9-.9l-.5 1.9c-.2.7-.7 1.5-1 2 1.3.4 2.7.6 4.1.6 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg> Pinterest</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.5 13.5l-1.2 2.3c-.4.8-1.2 1.4-2.1 1.6-.4.1-.8.1-1.2 0-.4-.1-.7-.3-1-.6-.3-.3-.5-.7-.6-1.2-.1-.5 0-1 .2-1.4l1.4-2.7c.2-.4.3-.9.3-1.4 0-.5-.1-.9-.3-1.3-.2-.4-.4-.7-.7-.9-.3-.2-.7-.3-1.1-.3-.8 0-1.5.3-2 .9-.6.6-.9 1.4-.9 2.3 0 .7.2 1.3.5 1.8.3.5.7.9 1.2 1.2l-.4.7c-.3-.1-.6-.3-.8-.6-.2-.3-.4-.6-.5-1-.1-.4-.2-.8-.2-1.2 0-1.3.5-2.5 1.3-3.4.8-.8 1.9-1.3 3.1-1.3 1.2 0 2.3.4 3.1 1.2.8.7 1.2 1.7 1.2 2.9 0 .5-.1.9-.2 1.4l-1.3 2.6c-.2.4-.3.9-.3 1.4 0 .5.1.9.3 1.3.2.4.4.7.7.9.3.2.7.3 1.1.3.8 0 1.5-.3 2-.9.6-.6.9-1.4.9-2.3 0-.7-.2-1.3-.5-1.8-.3-.5-.7-.9-1.2-1.2z"/></svg> Twitch</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M20.5 2h-17C2.7 2 2 2.7 2 3.5v17c0 .8.7 1.5 1.5 1.5h17c.8 0 1.5-.7 1.5-1.5v-17c0-.8-.7-1.5-1.5-1.5zM7 18H4.5v-9H7v9zm-1.2-10.2c-.8 0-1.5-.7-1.5-1.5S5 4.8 5.8 4.8s1.5.7 1.5 1.5-.7 1.5-1.5 1.5zM20 18h-2.5v-4.8c0-1.2-.4-2-1.5-2s-1.5.8-1.5 2V18H12V9h2.5v1.2c.4-.7 1.2-1.2 2.2-1.2 1.8 0 3.3 1.1 3.3 3.8V18z"/></svg> LinkedIn</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm3.4 15.1c-2.3 1.4-5.2 1.2-7.2-.3-1.9-1.5-2.7-4-1.9-6.2.7-1.9 2.5-3.4 4.6-3.8 2.2-.4 4.4.4 5.8 2.1.3.4.5.8.6 1.3l-2.2.9c-.1-.3-.2-.5-.4-.7-.8-.9-2.1-1.2-3.3-.8-1.1.4-1.9 1.4-2.1 2.6-.2 1.1.2 2.3 1 3 .9.8 2.2 1.1 3.4.8.7-.2 1.3-.6 1.7-1.2.2-.3.3-.7.4-1l2.2.9c-.1.6-.4 1.1-.7 1.6-.4.5-.9 1-1.5 1.4z"/></svg> Spotify</div>
+                <div class="platform-item"><svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.5 10.5c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2 4.5c-1.4 0-2.5-1.1-2.5-2.5S7.1 12 8.5 12 11 13.1 11 14.5 9.9 17 8.5 17zm4.5-6c-.8 0-1.5-.7-1.5-1.5S12.2 8 13 8s1.5.7 1.5 1.5S13.8 11 13 11zm-1.5 7.5c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm5.5-9.5c-1.4 0-2.5-1.1-2.5-2.5S15.1 4 16.5 4 19 5.1 19 6.5 17.9 9 16.5 9zm-2 11c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg> Reddit</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="blog">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-tag" data-i18n="blog_tag">Blog</div>
+            <h2 data-i18n="blog_title">Latest Articles</h2>
+            <p data-i18n="blog_sub">Tips and guides for downloading from various platforms.</p>
+        </div>
+        <div class="blog-grid">
+            <!-- المقال الأول - فيديو يوتيوب -->
+            <div class="blog-card reveal">
+                <div class="blog-thumb" style="background: url('https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=400&h=200&fit=crop') center/cover no-repeat;"></div>
+                <div class="blog-body">
+                    <h3 data-i18n="blog1_title">How to Download YouTube Videos</h3>
+                    <p data-i18n="blog1_text">Step-by-step guide to save YouTube videos for offline viewing.</p>
+                    <a href="how-to-download-youtube-videos.html" class="read-more" data-i18n="read_more">Read More</a>
+                </div>
+            </div>
+
+            <!-- المقال الثاني - صوت/موسيقى -->
+            <div class="blog-card reveal">
+                <div class="blog-thumb" style="background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=200&fit=crop') center/cover no-repeat;"></div>
+                <div class="blog-body">
+                    <h3 data-i18n="blog2_title">Extract Audio from TikTok</h3>
+                    <p data-i18n="blog2_text">Learn how to save only the audio from TikTok videos.</p>
+                    <a href="how-to-download-tek-audio.html" class="read-more" data-i18n="read_more">Read More</a>
+                </div>
+            </div>
+
+            <!-- المقال الثالث - انستغرام Reels -->
+            <div class="blog-card reveal">
+                <div class="blog-thumb" style="background: url('https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=200&fit=crop') center/cover no-repeat;"></div>
+                <div class="blog-body">
+                    <h3 data-i18n="blog3_title">Download Instagram Reels</h3>
+                    <p data-i18n="blog3_text">Save your favorite Instagram Reels to watch later.</p>
+                    <a href="how-to-download-Instagram-img.html" class="read-more" data-i18n="read_more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-tag" data-i18n="about_tag">About Us</div><h2 data-i18n="about_title">Our Story</h2><p data-i18n="about_sub">Trusted by millions worldwide since 2026.</p></div>
+            <div class="stats-bar reveal">
+                <div class="stat-item"><h4>10M+</h4><p data-i18n="stat_downloads">Downloads</p></div>
+                <div class="stat-item"><h4>500K+</h4><p data-i18n="stat_users">Active Users</p></div>
+                <div class="stat-item"><h4>100+</h4><p data-i18n="stat_platforms">Platforms</p></div>
+                <div class="stat-item"><h4>4.9</h4><p data-i18n="stat_rating">Average Rating</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-tag" data-i18n="testi_tag">Testimonials</div><h2 data-i18n="testi_title">Trusted by millions</h2><p data-i18n="testi_sub">See what users are saying about GrabVid.</p></div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal"><div class="star-rating"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div><p data-i18n="testi1_text">"The fastest downloader I've ever used. Works flawlessly on my phone."</p><div class="testimonial-author"><div class="testimonial-avatar">JD</div><div><h4>John Doe</h4><p data-i18n="testi1_role">Content Creator</p></div></div></div>
+                <div class="testimonial-card reveal"><div class="star-rating"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div><p data-i18n="testi2_text">"No ads, no pop-ups, just clean downloads. Highly recommend."</p><div class="testimonial-author"><div class="testimonial-avatar">SM</div><div><h4>Sara Miller</h4><p data-i18n="testi2_role">Podcaster</p></div></div></div>
+                <div class="testimonial-card reveal"><div class="star-rating"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div><p data-i18n="testi3_text">"I use it daily to save tutorials. The quality options are amazing."</p><div class="testimonial-author"><div class="testimonial-avatar">RK</div><div><h4>Ravi Kumar</h4><p data-i18n="testi3_role">Student</p></div></div></div>
+                <div class="testimonial-card reveal"><div class="star-rating"><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span><span class="star filled">★</span></div><p data-i18n="testi4_text">"Batch download feature is a game changer for my workflow."</p><div class="testimonial-author"><div class="testimonial-avatar">LM</div><div><h4>Lena Meyer</h4><p data-i18n="testi4_role">Video Editor</p></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header reveal"><div class="section-tag" data-i18n="faq_tag">FAQ</div><h2 data-i18n="faq_title">Frequently Asked Questions</h2><p data-i18n="faq_sub">Answers to common questions about GrabVid.</p></div>
+            <div class="faq-grid" id="faqList">
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq1_q">Is GrabVid free? <span>+</span></button><div class="faq-answer" data-i18n="faq1_a">Yes, GrabVid is completely free. No registration, no hidden fees.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq2_q">What platforms are supported? <span>+</span></button><div class="faq-answer" data-i18n="faq2_a">We support over 100 platforms including YouTube, Instagram, TikTok, X, SoundCloud, Vimeo, and many more.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq3_q">Can I download in high quality? <span>+</span></button><div class="faq-answer" data-i18n="faq3_a">Absolutely! You can choose from various qualities, up to 4K video and 320kbps audio.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq4_q">Is it safe to use? <span>+</span></button><div class="faq-answer" data-i18n="faq4_a">Yes, we respect your privacy. We do not store any links or downloaded files.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq5_q">Do I need to install anything? <span>+</span></button><div class="faq-answer" data-i18n="faq5_a">No, GrabVid works directly in your browser. Just paste the link and download.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq6_q">Is there an API available? <span>+</span></button><div class="faq-answer" data-i18n="faq6_a">We are currently working on a developer API. Stay tuned for updates.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq7_q">Can I download playlists? <span>+</span></button><div class="faq-answer" data-i18n="faq7_a">Yes, playlist downloading is supported on many platforms.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq8_q">What formats are available? <span>+</span></button><div class="faq-answer" data-i18n="faq8_a">MP4, MP3, WEBM, M4A, and more depending on the source.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq9_q">Is there a limit on downloads? <span>+</span></button><div class="faq-answer" data-i18n="faq9_a">No limits for personal use. Heavy commercial use may require a license.</div></div>
+                <div class="faq-item reveal"><button class="faq-question" data-i18n="faq10_q">How do I report a bug? <span>+</span></button><div class="faq-answer" data-i18n="faq10_a">Contact us via the form on the site or email support@grabvid.com.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="cta-section reveal">
+                <h2 data-i18n="cta_title">Ready to download?</h2>
+                <p data-i18n="cta_sub">Paste your first link and get your file in seconds.</p>
+                <a href="#download" class="cta-btn" data-i18n="cta_btn">Start Downloading</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="font-size: 1.2rem;"><div class="logo-icon" style="width: 28px; height: 28px;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px;"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>GrabVid</div>
+            <ul class="footer-links">
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#how-it-works" data-i18n="nav_how">How It Works</a></li>
+                <li><a href="#platforms" data-i18n="nav_platforms">Platforms</a></li>
+                <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+                <li><a href="privacy.html" data-i18n="privacy">Privacy Policy</a></li>
+                <li><a href="terms.html" data-i18n="terms">Terms of Use</a></li>
+            </ul>
+            <p data-i18n="copyright">© 2026 GrabVid. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                nav_features: "Features", nav_how: "How It Works", nav_platforms: "Platforms", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "About", nav_download: "Download Now",
+                theme: "Theme", language: "Language", choose_language: "Choose Language", choose_language_sub: "Select your preferred language",
+                choose_theme: "Choose Theme", choose_theme_sub: "Select your preferred style",
+                hero_title: "Download <span>Videos & Audio</span> from Any Platform", hero_sub: "Paste a link and get your file in high quality. Fast, free, and no registration required.",
+                placeholder_url: "Paste video or audio URL here...", download_btn: "Download",
+                features_tag: "Why GrabVid", features_title: "Everything you need in a downloader", features_sub: "We make saving media simple and accessible on any device.",
+                feat1_title: "Lightning Fast", feat1_desc: "Servers optimized for speed, get your file in seconds.",
+                feat2_title: "High Quality", feat2_desc: "Download in up to 4K video and 320kbps audio.",
+                feat3_title: "Mobile Friendly", feat3_desc: "Works perfectly on smartphones, tablets, and desktops.",
+                feat4_title: "Privacy First", feat4_desc: "No tracking, no logs, your links are not stored.",
+                feat5_title: "Multi-Format", feat5_desc: "Save as MP4, MP3, WEBM, and more.",
+                feat6_title: "Universal", feat6_desc: "Supports 100+ platforms and counting.",
+                feat7_title: "No Ads", feat7_desc: "Clean interface without annoying pop-ups.",
+                feat8_title: "No Registration", feat8_desc: "Use instantly without creating an account.",
+                feat9_title: "Batch Downloads", feat9_desc: "Paste multiple links and download them all.",
+                feat10_title: "Regular Updates", feat10_desc: "We constantly add new platforms and features.",
+                how_tag: "How It Works", how_title: "Three simple steps", how_sub: "No technical knowledge needed.",
+                step1_title: "Copy Link", step1_desc: "Find the video or audio you want and copy its URL.",
+                step2_title: "Paste & Analyze", step2_desc: "Paste the link into GrabVid and wait a second.",
+                step3_title: "Download", step3_desc: "Choose format and quality, then download your file.",
+                plat_tag: "Supported Platforms", plat_title: "Works with your favorite sites", plat_sub: "We cover the most popular video and audio platforms.",
+                blog_tag: "Blog", blog_title: "Latest Articles", blog_sub: "Tips and guides for downloading from various platforms.",
+                blog1_title: "How to Download YouTube Videos", blog1_text: "Step-by-step guide to save YouTube videos for offline viewing.",
+                blog2_title: "Extract Audio from TikTok", blog2_text: "Learn how to save only the audio from TikTok videos.",
+                blog3_title: "Download Instagram Reels", blog3_text: "Save your favorite Instagram Reels to watch later.",
+                read_more: "Read More",
+                about_tag: "About Us", about_title: "Our Story", about_sub: "Trusted by millions worldwide since 2026.",
+                stat_downloads: "Downloads", stat_users: "Active Users", stat_platforms: "Platforms", stat_rating: "Average Rating",
+                testi_tag: "Testimonials", testi_title: "Trusted by millions", testi_sub: "See what users are saying about GrabVid.",
+                testi1_text: "\"The fastest downloader I've ever used. Works flawlessly on my phone.\"", testi1_role: "Content Creator",
+                testi2_text: "\"No ads, no pop-ups, just clean downloads. Highly recommend.\"", testi2_role: "Podcaster",
+                testi3_text: "\"I use it daily to save tutorials. The quality options are amazing.\"", testi3_role: "Student",
+                testi4_text: "\"Batch download feature is a game changer for my workflow.\"", testi4_role: "Video Editor",
+                faq_tag: "FAQ", faq_title: "Frequently Asked Questions", faq_sub: "Answers to common questions about GrabVid.",
+                faq1_q: "Is GrabVid free?", faq1_a: "Yes, GrabVid is completely free. No registration, no hidden fees.",
+                faq2_q: "What platforms are supported?", faq2_a: "We support over 100 platforms including YouTube, Instagram, TikTok, X, SoundCloud, Vimeo, and many more.",
+                faq3_q: "Can I download in high quality?", faq3_a: "Absolutely! You can choose from various qualities, up to 4K video and 320kbps audio.",
+                faq4_q: "Is it safe to use?", faq4_a: "Yes, we respect your privacy. We do not store any links or downloaded files.",
+                faq5_q: "Do I need to install anything?", faq5_a: "No, GrabVid works directly in your browser. Just paste the link and download.",
+                faq6_q: "Is there an API available?", faq6_a: "We are currently working on a developer API. Stay tuned for updates.",
+                faq7_q: "Can I download playlists?", faq7_a: "Yes, playlist downloading is supported on many platforms.",
+                faq8_q: "What formats are available?", faq8_a: "MP4, MP3, WEBM, M4A, and more depending on the source.",
+                faq9_q: "Is there a limit on downloads?", faq9_a: "No limits for personal use. Heavy commercial use may require a license.",
+                faq10_q: "How do I report a bug?", faq10_a: "Contact us via the form on the site or email support@grabvid.com.",
+                cta_title: "Ready to download?", cta_sub: "Paste your first link and get your file in seconds.", cta_btn: "Start Downloading",
+                privacy: "Privacy Policy", terms: "Terms of Use", copyright: "© 2026 GrabVid. All rights reserved.",
+                modal_title: "Download Options", modal_sub: "Select format and quality:",
+                format1: "Video MP4 - 1080p", format2: "Video MP4 - 720p", format3: "Audio MP3 - 320kbps", format4: "Audio MP3 - 128kbps"
+            },
+            ar: {
+                nav_features: "المميزات", nav_how: "كيف يعمل", nav_platforms: "المنصات", nav_faq: "الأسئلة الشائعة", nav_blog: "المدونة", nav_about: "من نحن", nav_download: "حمّل الآن",
+                theme: "المظهر", language: "اللغة", choose_language: "اختر اللغة", choose_language_sub: "اختر لغتك المفضلة",
+                choose_theme: "اختر المظهر", choose_theme_sub: "اختر النمط المفضل لديك",
+                hero_title: "حمّل <span>الفيديوهات والصوتيات</span> من أي منصة", hero_sub: "الصق الرابط واحصل على ملفك بجودة عالية. سريع ومجاني وبدون تسجيل.",
+                placeholder_url: "الصق رابط الفيديو أو الصوت هنا...", download_btn: "تحميل",
+                features_tag: "لماذا GrabVid", features_title: "كل ما تحتاجه في أداة تحميل", features_sub: "نجعل حفظ الوسائط بسيطًا ومتاحًا على أي جهاز.",
+                feat1_title: "سريع جدًا", feat1_desc: "خوادم محسنة للسرعة، احصل على ملفك في ثوانٍ.",
+                feat2_title: "جودة عالية", feat2_desc: "حمّل بجودة تصل إلى 4K فيديو و 320kbps صوت.",
+                feat3_title: "متوافق مع الجوال", feat3_desc: "يعمل بشكل مثالي على الهواتف والأجهزة اللوحية وأجهزة الكمبيوتر.",
+                feat4_title: "الخصوصية أولًا", feat4_desc: "لا تتبع، لا سجلات، روابطك لا يتم تخزينها.",
+                feat5_title: "متعدد الصيغ", feat5_desc: "احفظ بصيغ MP4 و MP3 و WEBM والمزيد.",
+                feat6_title: "عالمي", feat6_desc: "يدعم أكثر من 100 منصة والعدد في ازدياد.",
+                feat7_title: "بدون إعلانات", feat7_desc: "واجهة نظيفة بدون نوافذ منبثقة مزعجة.",
+                feat8_title: "بدون تسجيل", feat8_desc: "استخدم فورًا بدون إنشاء حساب.",
+                feat9_title: "تحميل متعدد", feat9_desc: "الصق روابط متعددة وحمّلها كلها.",
+                feat10_title: "تحديثات منتظمة", feat10_desc: "نضيف منصات وميزات جديدة باستمرار.",
+                how_tag: "كيف يعمل", how_title: "ثلاث خطوات بسيطة", how_sub: "لا حاجة لأي معرفة تقنية.",
+                step1_title: "انسخ الرابط", step1_desc: "ابحث عن الفيديو أو الصوت الذي تريده وانسخ رابطه.",
+                step2_title: "الصق وحلل", step2_desc: "الصق الرابط في GrabVid وانتظر ثانية.",
+                step3_title: "حمّل", step3_desc: "اختر الصيغة والجودة ثم حمّل ملفك.",
+                plat_tag: "المنصات المدعومة", plat_title: "يعمل مع مواقعك المفضلة", plat_sub: "نغطي أشهر منصات الفيديو والصوت.",
+                blog_tag: "المدونة", blog_title: "أحدث المقالات", blog_sub: "نصائح وإرشادات للتحميل من منصات مختلفة.",
+                blog1_title: "كيف تحمّل فيديوهات يوتيوب", blog1_text: "دليل خطوة بخطوة لحفظ فيديوهات يوتيوب للمشاهدة دون اتصال.",
+                blog2_title: "استخراج الصوت من تيك توك", blog2_text: "تعلم كيف تحفظ الصوت فقط من فيديوهات تيك توك.",
+                blog3_title: "تحميل Reels انستغرام", blog3_text: "احفظ Reels انستغرام المفضلة لديك لمشاهدتها لاحقًا.",
+                read_more: "اقرأ المزيد",
+                about_tag: "من نحن", about_title: "قصتنا", about_sub: "موثوق من قبل الملايين منذ 2026.",
+                stat_downloads: "تحميلات", stat_users: "مستخدم نشط", stat_platforms: "منصة", stat_rating: "متوسط التقييم",
+                testi_tag: "آراء المستخدمين", testi_title: "موثوق من قبل الملايين", testi_sub: "شاهد ماذا يقول المستخدمون عن GrabVid.",
+                testi1_text: "\"أسرع أداة تحميل استخدمتها على الإطلاق. تعمل بسلاسة على هاتفي.\"", testi1_role: "صانع محتوى",
+                testi2_text: "\"لا إعلانات، لا نوافذ منبثقة، مجرد تحميل نظيف. أنصح به بشدة.\"", testi2_role: "مدون صوتي",
+                testi3_text: "\"أستخدمه يوميًا لحفظ الدروس. خيارات الجودة مذهلة.\"", testi3_role: "طالب",
+                testi4_text: "\"ميزة التحميل المتعدد غيرت قواعد اللعبة في عملي.\"", testi4_role: "محرر فيديو",
+                faq_tag: "الأسئلة الشائعة", faq_title: "الأسئلة المتكررة", faq_sub: "إجابات على الأسئلة الشائعة حول GrabVid.",
+                faq1_q: "هل GrabVid مجاني؟", faq1_a: "نعم، GrabVid مجاني تمامًا. لا تسجيل ولا رسوم خفية.",
+                faq2_q: "ما المنصات المدعومة؟", faq2_a: "ندعم أكثر من 100 منصة بما في ذلك يوتيوب وانستغرام وتيك توك وإكس وساوند كلاود وفيميو وغيرها الكثير.",
+                faq3_q: "هل يمكنني التحميل بجودة عالية؟", faq3_a: "بالتأكيد! يمكنك الاختيار من بين جودات متعددة حتى 4K فيديو و 320kbps صوت.",
+                faq4_q: "هل هو آمن للاستخدام؟", faq4_a: "نعم، نحن نحترم خصوصيتك. لا نقوم بتخزين أي روابط أو ملفات تم تحميلها.",
+                faq5_q: "هل أحتاج إلى تثبيت أي شيء؟", faq5_a: "لا، GrabVid يعمل مباشرة في متصفحك. فقط الصق الرابط وحمّل.",
+                faq6_q: "هل توجد واجهة برمجة تطبيقات؟", faq6_a: "نعمل حاليًا على واجهة برمجة تطبيقات للمطورين. ترقبوا التحديثات.",
+                faq7_q: "هل يمكنني تحميل قوائم التشغيل؟", faq7_a: "نعم، تحميل قوائم التشغيل مدعوم على العديد من المنصات.",
+                faq8_q: "ما الصيغ المتاحة؟", faq8_a: "MP4 و MP3 و WEBM و M4A وغيرها حسب المصدر.",
+                faq9_q: "هل يوجد حد لعدد التحميلات؟", faq9_a: "لا حدود للاستخدام الشخصي. الاستخدام التجاري الكثيف قد يتطلب ترخيصًا.",
+                faq10_q: "كيف أبلغ عن خطأ؟", faq10_a: "تواصل معنا عبر النموذج في الموقع أو راسلنا على support@grabvid.com.",
+                cta_title: "مستعد للتحميل؟", cta_sub: "الصق رابطك الأول واحصل على ملفك في ثوانٍ.", cta_btn: "ابدأ التحميل",
+                privacy: "سياسة الخصوصية", terms: "شروط الاستخدام", copyright: "© 2026 GrabVid. جميع الحقوق محفوظة.",
+                modal_title: "خيارات التحميل", modal_sub: "اختر الصيغة والجودة:",
+                format1: "فيديو MP4 - 1080p", format2: "فيديو MP4 - 720p", format3: "صوت MP3 - 320kbps", format4: "صوت MP3 - 128kbps"
+            },
+            ru: {
+                nav_features: "Возможности", nav_how: "Как работает", nav_platforms: "Платформы", nav_faq: "Вопросы", nav_blog: "Блог", nav_about: "О нас", nav_download: "Скачать сейчас",
+                theme: "Тема", language: "Язык", choose_language: "Выберите язык", choose_language_sub: "Выберите предпочтительный язык",
+                choose_theme: "Выберите тему", choose_theme_sub: "Выберите предпочтительный стиль",
+                hero_title: "Скачивайте <span>видео и аудио</span> с любой платформы", hero_sub: "Вставьте ссылку и получите файл в высоком качестве. Быстро, бесплатно и без регистрации.",
+                placeholder_url: "Вставьте ссылку на видео или аудио...", download_btn: "Скачать",
+                features_tag: "Почему GrabVid", features_title: "Все, что нужно в загрузчике", features_sub: "Мы делаем сохранение медиа простым и доступным на любом устройстве.",
+                feat1_title: "Молниеносно", feat1_desc: "Серверы оптимизированы для скорости, получите файл за секунды.",
+                feat2_title: "Высокое качество", feat2_desc: "Скачивайте до 4K видео и аудио 320kbps.",
+                feat3_title: "Мобильная версия", feat3_desc: "Отлично работает на смартфонах, планшетах и компьютерах.",
+                feat4_title: "Конфиденциальность", feat4_desc: "Без отслеживания, без логов, ваши ссылки не сохраняются.",
+                feat5_title: "Многоформатность", feat5_desc: "Сохраняйте в MP4, MP3, WEBM и других форматах.",
+                feat6_title: "Универсальность", feat6_desc: "Поддерживает более 100 платформ и это число растет.",
+                feat7_title: "Без рекламы", feat7_desc: "Чистый интерфейс без назойливых всплывающих окон.",
+                feat8_title: "Без регистрации", feat8_desc: "Используйте сразу без создания аккаунта.",
+                feat9_title: "Пакетная загрузка", feat9_desc: "Вставьте несколько ссылок и скачайте их все.",
+                feat10_title: "Регулярные обновления", feat10_desc: "Мы постоянно добавляем новые платформы и функции.",
+                how_tag: "Как это работает", how_title: "Три простых шага", how_sub: "Технические знания не требуются.",
+                step1_title: "Скопируйте ссылку", step1_desc: "Найдите нужное видео или аудио и скопируйте его URL.",
+                step2_title: "Вставьте и анализируйте", step2_desc: "Вставьте ссылку в GrabVid и подождите секунду.",
+                step3_title: "Скачайте", step3_desc: "Выберите формат и качество, затем скачайте файл.",
+                plat_tag: "Поддерживаемые платформы", plat_title: "Работает с вашими любимыми сайтами", plat_sub: "Мы охватываем самые популярные видео- и аудиоплатформы.",
+                blog_tag: "Блог", blog_title: "Последние статьи", blog_sub: "Советы и руководства по скачиванию с разных платформ.",
+                blog1_title: "Как скачать видео с YouTube", blog1_text: "Пошаговое руководство по сохранению видео YouTube для офлайн-просмотра.",
+                blog2_title: "Извлечение аудио из TikTok", blog2_text: "Узнайте, как сохранить только аудио из видео TikTok.",
+                blog3_title: "Скачать Instagram Reels", blog3_text: "Сохраняйте любимые Instagram Reels для просмотра позже.",
+                read_more: "Читать далее",
+                about_tag: "О нас", about_title: "Наша история", about_sub: "Нам доверяют миллионы с 2026 года.",
+                stat_downloads: "Загрузки", stat_users: "Активные пользователи", stat_platforms: "Платформы", stat_rating: "Средняя оценка",
+                testi_tag: "Отзывы", testi_title: "Нам доверяют миллионы", testi_sub: "Посмотрите, что говорят пользователи о GrabVid.",
+                testi1_text: "\"Самый быстрый загрузчик, который я когда-либо использовал. Отлично работает на телефоне.\"", testi1_role: "Создатель контента",
+                testi2_text: "\"Без рекламы, без всплывающих окон, только чистые загрузки. Очень рекомендую.\"", testi2_role: "Подкастер",
+                testi3_text: "\"Использую ежедневно для сохранения уроков. Варианты качества потрясающие.\"", testi3_role: "Студент",
+                testi4_text: "\"Пакетная загрузка — переломный момент в моей работе.\"", testi4_role: "Видеомонтажер",
+                faq_tag: "Вопросы", faq_title: "Часто задаваемые вопросы", faq_sub: "Ответы на распространенные вопросы о GrabVid.",
+                faq1_q: "Бесплатен ли GrabVid?", faq1_a: "Да, GrabVid полностью бесплатен. Без регистрации и скрытых платежей.",
+                faq2_q: "Какие платформы поддерживаются?", faq2_a: "Мы поддерживаем более 100 платформ, включая YouTube, Instagram, TikTok, X, SoundCloud, Vimeo и многие другие.",
+                faq3_q: "Могу ли я скачивать в высоком качестве?", faq3_a: "Конечно! Вы можете выбирать из разных качеств, вплоть до 4K видео и аудио 320kbps.",
+                faq4_q: "Безопасно ли это?", faq4_a: "Да, мы уважаем вашу конфиденциальность. Мы не храним ссылки или загруженные файлы.",
+                faq5_q: "Нужно ли что-то устанавливать?", faq5_a: "Нет, GrabVid работает прямо в браузере. Просто вставьте ссылку и скачайте.",
+                faq6_q: "Есть ли API?", faq6_a: "Мы работаем над API для разработчиков. Следите за обновлениями.",
+                faq7_q: "Можно ли скачивать плейлисты?", faq7_a: "Да, скачивание плейлистов поддерживается на многих платформах.",
+                faq8_q: "Какие форматы доступны?", faq8_a: "MP4, MP3, WEBM, M4A и другие в зависимости от источника.",
+                faq9_q: "Есть ли ограничения на скачивание?", faq9_a: "Нет ограничений для личного использования. Для коммерческого использования может потребоваться лицензия.",
+                faq10_q: "Как сообщить об ошибке?", faq10_a: "Свяжитесь с нами через форму на сайте или напишите на support@grabvid.com.",
+                cta_title: "Готовы скачать?", cta_sub: "Вставьте первую ссылку и получите файл за секунды.", cta_btn: "Начать скачивание",
+                privacy: "Политика конфиденциальности", terms: "Условия использования", copyright: "© 2026 GrabVid. Все права защищены.",
+                modal_title: "Варианты скачивания", modal_sub: "Выберите формат и качество:",
+                format1: "Видео MP4 - 1080p", format2: "Видео MP4 - 720p", format3: "Аудио MP3 - 320kbps", format4: "Аудио MP3 - 128kbps"
+            },
+            fr: {
+                nav_features: "Fonctionnalités", nav_how: "Comment ça marche", nav_platforms: "Plateformes", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "À propos", nav_download: "Télécharger",
+                theme: "Thème", language: "Langue", choose_language: "Choisir la langue", choose_language_sub: "Sélectionnez votre langue préférée",
+                choose_theme: "Choisir le thème", choose_theme_sub: "Sélectionnez votre style préféré",
+                hero_title: "Téléchargez <span>vidéos et audio</span> depuis n'importe quelle plateforme", hero_sub: "Collez un lien et obtenez votre fichier en haute qualité. Rapide, gratuit et sans inscription.",
+                placeholder_url: "Collez l'URL de la vidéo ou de l'audio ici...", download_btn: "Télécharger",
+                features_tag: "Pourquoi GrabVid", features_title: "Tout ce dont vous avez besoin dans un téléchargeur", features_sub: "Nous rendons l'enregistrement de médias simple et accessible sur n'importe quel appareil.",
+                feat1_title: "Ultra rapide", feat1_desc: "Serveurs optimisés pour la vitesse, obtenez votre fichier en quelques secondes.",
+                feat2_title: "Haute qualité", feat2_desc: "Téléchargez jusqu'à 4K vidéo et 320kbps audio.",
+                feat3_title: "Mobile friendly", feat3_desc: "Fonctionne parfaitement sur smartphones, tablettes et ordinateurs.",
+                feat4_title: "Confidentialité d'abord", feat4_desc: "Pas de suivi, pas de journaux, vos liens ne sont pas stockés.",
+                feat5_title: "Multi-formats", feat5_desc: "Enregistrez en MP4, MP3, WEBM et plus.",
+                feat6_title: "Universel", feat6_desc: "Prend en charge plus de 100 plateformes et plus encore.",
+                feat7_title: "Sans publicité", feat7_desc: "Interface propre sans pop-ups gênants.",
+                feat8_title: "Sans inscription", feat8_desc: "Utilisez immédiatement sans créer de compte.",
+                feat9_title: "Téléchargement par lots", feat9_desc: "Collez plusieurs liens et téléchargez-les tous.",
+                feat10_title: "Mises à jour régulières", feat10_desc: "Nous ajoutons constamment de nouvelles plateformes et fonctionnalités.",
+                how_tag: "Comment ça marche", how_title: "Trois étapes simples", how_sub: "Aucune connaissance technique requise.",
+                step1_title: "Copiez le lien", step1_desc: "Trouvez la vidéo ou l'audio souhaité et copiez son URL.",
+                step2_title: "Collez et analysez", step2_desc: "Collez le lien dans GrabVid et attendez une seconde.",
+                step3_title: "Téléchargez", step3_desc: "Choisissez le format et la qualité, puis téléchargez votre fichier.",
+                plat_tag: "Plateformes prises en charge", plat_title: "Fonctionne avec vos sites préférés", plat_sub: "Nous couvrons les plateformes vidéo et audio les plus populaires.",
+                blog_tag: "Blog", blog_title: "Derniers articles", blog_sub: "Conseils et guides pour télécharger depuis différentes plateformes.",
+                blog1_title: "Comment télécharger des vidéos YouTube", blog1_text: "Guide étape par étape pour sauvegarder des vidéos YouTube hors ligne.",
+                blog2_title: "Extraire l'audio de TikTok", blog2_text: "Apprenez à sauvegarder uniquement l'audio des vidéos TikTok.",
+                blog3_title: "Télécharger des Reels Instagram", blog3_text: "Enregistrez vos Reels Instagram préférés pour les regarder plus tard.",
+                read_more: "Lire la suite",
+                about_tag: "À propos", about_title: "Notre histoire", about_sub: "Approuvé par des millions depuis 2026.",
+                stat_downloads: "Téléchargements", stat_users: "Utilisateurs actifs", stat_platforms: "Plateformes", stat_rating: "Note moyenne",
+                testi_tag: "Témoignages", testi_title: "Approuvé par des millions", testi_sub: "Découvrez ce que disent les utilisateurs de GrabVid.",
+                testi1_text: "\"Le téléchargeur le plus rapide que j'ai jamais utilisé. Fonctionne parfaitement sur mon téléphone.\"", testi1_role: "Créateur de contenu",
+                testi2_text: "\"Pas de pubs, pas de pop-ups, juste des téléchargements propres. Je recommande vivement.\"", testi2_role: "Podcasteur",
+                testi3_text: "\"Je l'utilise quotidiennement pour sauvegarder des tutoriels. Les options de qualité sont incroyables.\"", testi3_role: "Étudiant",
+                testi4_text: "\"La fonction de téléchargement par lots a changé ma façon de travailler.\"", testi4_role: "Monteur vidéo",
+                faq_tag: "FAQ", faq_title: "Questions fréquemment posées", faq_sub: "Réponses aux questions courantes sur GrabVid.",
+                faq1_q: "GrabVid est-il gratuit ?", faq1_a: "Oui, GrabVid est entièrement gratuit. Pas d'inscription, pas de frais cachés.",
+                faq2_q: "Quelles plateformes sont prises en charge ?", faq2_a: "Nous prenons en charge plus de 100 plateformes, dont YouTube, Instagram, TikTok, X, SoundCloud, Vimeo et bien d'autres.",
+                faq3_q: "Puis-je télécharger en haute qualité ?", faq3_a: "Absolument ! Vous pouvez choisir parmi différentes qualités, jusqu'à 4K vidéo et 320kbps audio.",
+                faq4_q: "Est-ce sûr ?", faq4_a: "Oui, nous respectons votre vie privée. Nous ne stockons aucun lien ni fichier téléchargé.",
+                faq5_q: "Dois-je installer quelque chose ?", faq5_a: "Non, GrabVid fonctionne directement dans votre navigateur. Collez simplement le lien et téléchargez.",
+                faq6_q: "Y a-t-il une API disponible ?", faq6_a: "Nous travaillons actuellement sur une API pour développeurs. Restez à l'écoute.",
+                faq7_q: "Puis-je télécharger des playlists ?", faq7_a: "Oui, le téléchargement de playlists est pris en charge sur de nombreuses plateformes.",
+                faq8_q: "Quels formats sont disponibles ?", faq8_a: "MP4, MP3, WEBM, M4A et plus selon la source.",
+                faq9_q: "Y a-t-il une limite de téléchargement ?", faq9_a: "Aucune limite pour un usage personnel. Un usage commercial intensif peut nécessiter une licence.",
+                faq10_q: "Comment signaler un bug ?", faq10_a: "Contactez-nous via le formulaire du site ou par email à support@grabvid.com.",
+                cta_title: "Prêt à télécharger ?", cta_sub: "Collez votre premier lien et obtenez votre fichier en quelques secondes.", cta_btn: "Commencer à télécharger",
+                privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", copyright: "© 2026 GrabVid. Tous droits réservés.",
+                modal_title: "Options de téléchargement", modal_sub: "Sélectionnez le format et la qualité :",
+                format1: "Vidéo MP4 - 1080p", format2: "Vidéo MP4 - 720p", format3: "Audio MP3 - 320kbps", format4: "Audio MP3 - 128kbps"
+            },
+            es: {
+                nav_features: "Características", nav_how: "Cómo funciona", nav_platforms: "Plataformas", nav_faq: "Preguntas frecuentes", nav_blog: "Blog", nav_about: "Acerca de", nav_download: "Descargar ahora",
+                theme: "Tema", language: "Idioma", choose_language: "Elegir idioma", choose_language_sub: "Selecciona tu idioma preferido",
+                choose_theme: "Elegir tema", choose_theme_sub: "Selecciona tu estilo preferido",
+                hero_title: "Descarga <span>videos y audio</span> de cualquier plataforma", hero_sub: "Pega un enlace y obtén tu archivo en alta calidad. Rápido, gratis y sin registro.",
+                placeholder_url: "Pega aquí la URL del video o audio...", download_btn: "Descargar",
+                features_tag: "Por qué GrabVid", features_title: "Todo lo que necesitas en un descargador", features_sub: "Hacemos que guardar medios sea simple y accesible en cualquier dispositivo.",
+                feat1_title: "Rapidísimo", feat1_desc: "Servidores optimizados para velocidad, obtén tu archivo en segundos.",
+                feat2_title: "Alta calidad", feat2_desc: "Descarga hasta 4K video y 320kbps audio.",
+                feat3_title: "Móvil amigable", feat3_desc: "Funciona perfectamente en smartphones, tabletas y computadoras.",
+                feat4_title: "Privacidad primero", feat4_desc: "Sin seguimiento, sin registros, tus enlaces no se almacenan.",
+                feat5_title: "Multi-formato", feat5_desc: "Guarda en MP4, MP3, WEBM y más.",
+                feat6_title: "Universal", feat6_desc: "Soporta más de 100 plataformas y contando.",
+                feat7_title: "Sin anuncios", feat7_desc: "Interfaz limpia sin pop-ups molestos.",
+                feat8_title: "Sin registro", feat8_desc: "Úsalo al instante sin crear cuenta.",
+                feat9_title: "Descarga por lotes", feat9_desc: "Pega múltiples enlaces y descárgalos todos.",
+                feat10_title: "Actualizaciones regulares", feat10_desc: "Agregamos constantemente nuevas plataformas y funciones.",
+                how_tag: "Cómo funciona", how_title: "Tres pasos simples", how_sub: "No se necesitan conocimientos técnicos.",
+                step1_title: "Copia el enlace", step1_desc: "Encuentra el video o audio que deseas y copia su URL.",
+                step2_title: "Pega y analiza", step2_desc: "Pega el enlace en GrabVid y espera un segundo.",
+                step3_title: "Descarga", step3_desc: "Elige formato y calidad, luego descarga tu archivo.",
+                plat_tag: "Plataformas compatibles", plat_title: "Funciona con tus sitios favoritos", plat_sub: "Cubrimos las plataformas de video y audio más populares.",
+                blog_tag: "Blog", blog_title: "Últimos artículos", blog_sub: "Consejos y guías para descargar de varias plataformas.",
+                blog1_title: "Cómo descargar videos de YouTube", blog1_text: "Guía paso a paso para guardar videos de YouTube para ver sin conexión.",
+                blog2_title: "Extraer audio de TikTok", blog2_text: "Aprende a guardar solo el audio de videos de TikTok.",
+                blog3_title: "Descargar Reels de Instagram", blog3_text: "Guarda tus Reels de Instagram favoritos para verlos más tarde.",
+                read_more: "Leer más",
+                about_tag: "Acerca de", about_title: "Nuestra historia", about_sub: "Confiado por millones desde 2026.",
+                stat_downloads: "Descargas", stat_users: "Usuarios activos", stat_platforms: "Plataformas", stat_rating: "Calificación promedio",
+                testi_tag: "Testimonios", testi_title: "Confiado por millones", testi_sub: "Mira lo que dicen los usuarios sobre GrabVid.",
+                testi1_text: "\"El descargador más rápido que he usado. Funciona perfecto en mi teléfono.\"", testi1_role: "Creador de contenido",
+                testi2_text: "\"Sin anuncios, sin pop-ups, solo descargas limpias. Lo recomiendo mucho.\"", testi2_role: "Podcaster",
+                testi3_text: "\"Lo uso a diario para guardar tutoriales. Las opciones de calidad son increíbles.\"", testi3_role: "Estudiante",
+                testi4_text: "\"La función de descarga por lotes cambió mi flujo de trabajo.\"", testi4_role: "Editor de video",
+                faq_tag: "Preguntas frecuentes", faq_title: "Preguntas frecuentes", faq_sub: "Respuestas a preguntas comunes sobre GrabVid.",
+                faq1_q: "¿GrabVid es gratis?", faq1_a: "Sí, GrabVid es completamente gratis. Sin registro ni cargos ocultos.",
+                faq2_q: "¿Qué plataformas son compatibles?", faq2_a: "Soportamos más de 100 plataformas, incluyendo YouTube, Instagram, TikTok, X, SoundCloud, Vimeo y muchas más.",
+                faq3_q: "¿Puedo descargar en alta calidad?", faq3_a: "¡Absolutamente! Puedes elegir entre varias calidades, hasta 4K video y 320kbps audio.",
+                faq4_q: "¿Es seguro?", faq4_a: "Sí, respetamos tu privacidad. No almacenamos enlaces ni archivos descargados.",
+                faq5_q: "¿Necesito instalar algo?", faq5_a: "No, GrabVid funciona directamente en tu navegador. Solo pega el enlace y descarga.",
+                faq6_q: "¿Hay API disponible?", faq6_a: "Estamos trabajando en una API para desarrolladores. Mantente atento.",
+                faq7_q: "¿Puedo descargar listas de reproducción?", faq7_a: "Sí, la descarga de listas de reproducción es compatible en muchas plataformas.",
+                faq8_q: "¿Qué formatos están disponibles?", faq8_a: "MP4, MP3, WEBM, M4A y más según la fuente.",
+                faq9_q: "¿Hay límite de descargas?", faq9_a: "Sin límites para uso personal. El uso comercial intensivo puede requerir licencia.",
+                faq10_q: "¿Cómo reporto un error?", faq10_a: "Contáctanos mediante el formulario del sitio o envíanos un correo a support@grabvid.com.",
+                cta_title: "¿Listo para descargar?", cta_sub: "Pega tu primer enlace y obtén tu archivo en segundos.", cta_btn: "Comenzar a descargar",
+                privacy: "Política de privacidad", terms: "Términos de uso", copyright: "© 2026 GrabVid. Todos los derechos reservados.",
+                modal_title: "Opciones de descarga", modal_sub: "Selecciona formato y calidad:",
+                format1: "Video MP4 - 1080p", format2: "Video MP4 - 720p", format3: "Audio MP3 - 320kbps", format4: "Audio MP3 - 128kbps"
+            },
+            de: {
+                nav_features: "Funktionen", nav_how: "So funktioniert's", nav_platforms: "Plattformen", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "Über uns", nav_download: "Jetzt herunterladen",
+                theme: "Thema", language: "Sprache", choose_language: "Sprache wählen", choose_language_sub: "Wählen Sie Ihre bevorzugte Sprache",
+                choose_theme: "Thema wählen", choose_theme_sub: "Wählen Sie Ihren bevorzugten Stil",
+                hero_title: "Laden Sie <span>Videos & Audio</span> von jeder Plattform herunter", hero_sub: "Fügen Sie einen Link ein und erhalten Sie Ihre Datei in hoher Qualität. Schnell, kostenlos und ohne Registrierung.",
+                placeholder_url: "Video- oder Audio-URL hier einfügen...", download_btn: "Herunterladen",
+                features_tag: "Warum GrabVid", features_title: "Alles, was Sie in einem Downloader brauchen", features_sub: "Wir machen das Speichern von Medien einfach und auf jedem Gerät zugänglich.",
+                feat1_title: "Blitzschnell", feat1_desc: "Server für Geschwindigkeit optimiert, erhalten Sie Ihre Datei in Sekunden.",
+                feat2_title: "Hohe Qualität", feat2_desc: "Laden Sie bis zu 4K Video und 320kbps Audio herunter.",
+                feat3_title: "Mobilfreundlich", feat3_desc: "Funktioniert perfekt auf Smartphones, Tablets und Computern.",
+                feat4_title: "Privatsphäre zuerst", feat4_desc: "Kein Tracking, keine Protokolle, Ihre Links werden nicht gespeichert.",
+                feat5_title: "Mehrere Formate", feat5_desc: "Speichern Sie als MP4, MP3, WEBM und mehr.",
+                feat6_title: "Universell", feat6_desc: "Unterstützt über 100 Plattformen und mehr.",
+                feat7_title: "Keine Werbung", feat7_desc: "Saubere Oberfläche ohne nervige Pop-ups.",
+                feat8_title: "Keine Registrierung", feat8_desc: "Sofort nutzbar ohne Kontoerstellung.",
+                feat9_title: "Stapel-Downloads", feat9_desc: "Fügen Sie mehrere Links ein und laden Sie alle herunter.",
+                feat10_title: "Regelmäßige Updates", feat10_desc: "Wir fügen ständig neue Plattformen und Funktionen hinzu.",
+                how_tag: "So funktioniert's", how_title: "Drei einfache Schritte", how_sub: "Keine technischen Kenntnisse erforderlich.",
+                step1_title: "Link kopieren", step1_desc: "Suchen Sie das gewünschte Video oder Audio und kopieren Sie die URL.",
+                step2_title: "Einfügen & Analysieren", step2_desc: "Fügen Sie den Link in GrabVid ein und warten Sie eine Sekunde.",
+                step3_title: "Herunterladen", step3_desc: "Wählen Sie Format und Qualität und laden Sie dann Ihre Datei herunter.",
+                plat_tag: "Unterstützte Plattformen", plat_title: "Funktioniert mit Ihren Lieblingsseiten", plat_sub: "Wir decken die beliebtesten Video- und Audio-Plattformen ab.",
+                blog_tag: "Blog", blog_title: "Neueste Artikel", blog_sub: "Tipps und Anleitungen zum Herunterladen von verschiedenen Plattformen.",
+                blog1_title: "YouTube-Videos herunterladen", blog1_text: "Schritt-für-Schritt-Anleitung zum Speichern von YouTube-Videos für offline.",
+                blog2_title: "Audio aus TikTok extrahieren", blog2_text: "Erfahren Sie, wie Sie nur das Audio aus TikTok-Videos speichern.",
+                blog3_title: "Instagram Reels herunterladen", blog3_text: "Speichern Sie Ihre Lieblings-Instagram-Reels zum späteren Ansehen.",
+                read_more: "Weiterlesen",
+                about_tag: "Über uns", about_title: "Unsere Geschichte", about_sub: "Seit 2026 von Millionen vertraut.",
+                stat_downloads: "Downloads", stat_users: "Aktive Nutzer", stat_platforms: "Plattformen", stat_rating: "Durchschnittliche Bewertung",
+                testi_tag: "Referenzen", testi_title: "Von Millionen vertraut", testi_sub: "Sehen Sie, was Nutzer über GrabVid sagen.",
+                testi1_text: "\"Der schnellste Downloader, den ich je benutzt habe. Funktioniert einwandfrei auf meinem Handy.\"", testi1_role: "Content Creator",
+                testi2_text: "\"Keine Werbung, keine Pop-ups, nur saubere Downloads. Sehr zu empfehlen.\"", testi2_role: "Podcaster",
+                testi3_text: "\"Ich benutze es täglich, um Tutorials zu speichern. Die Qualitätsoptionen sind unglaublich.\"", testi3_role: "Student",
+                testi4_text: "\"Die Stapel-Download-Funktion hat meinen Workflow verändert.\"", testi4_role: "Video-Editor",
+                faq_tag: "FAQ", faq_title: "Häufig gestellte Fragen", faq_sub: "Antworten auf häufige Fragen zu GrabVid.",
+                faq1_q: "Ist GrabVid kostenlos?", faq1_a: "Ja, GrabVid ist völlig kostenlos. Keine Registrierung, keine versteckten Gebühren.",
+                faq2_q: "Welche Plattformen werden unterstützt?", faq2_a: "Wir unterstützen über 100 Plattformen, darunter YouTube, Instagram, TikTok, X, SoundCloud, Vimeo und viele mehr.",
+                faq3_q: "Kann ich in hoher Qualität herunterladen?", faq3_a: "Absolut! Sie können aus verschiedenen Qualitäten wählen, bis zu 4K Video und 320kbps Audio.",
+                faq4_q: "Ist es sicher?", faq4_a: "Ja, wir respektieren Ihre Privatsphäre. Wir speichern keine Links oder heruntergeladenen Dateien.",
+                faq5_q: "Muss ich etwas installieren?", faq5_a: "Nein, GrabVid funktioniert direkt in Ihrem Browser. Fügen Sie einfach den Link ein und laden Sie herunter.",
+                faq6_q: "Gibt es eine API?", faq6_a: "Wir arbeiten derzeit an einer Entwickler-API. Bleiben Sie dran.",
+                faq7_q: "Kann ich Wiedergabelisten herunterladen?", faq7_a: "Ja, das Herunterladen von Wiedergabelisten wird auf vielen Plattformen unterstützt.",
+                faq8_q: "Welche Formate sind verfügbar?", faq8_a: "MP4, MP3, WEBM, M4A und mehr je nach Quelle.",
+                faq9_q: "Gibt es ein Download-Limit?", faq9_a: "Keine Limits für den persönlichen Gebrauch. Intensive kommerzielle Nutzung erfordert möglicherweise eine Lizenz.",
+                faq10_q: "Wie melde ich einen Fehler?", faq10_a: "Kontaktieren Sie uns über das Formular auf der Website oder per E-Mail an support@grabvid.com.",
+                cta_title: "Bereit zum Herunterladen?", cta_sub: "Fügen Sie Ihren ersten Link ein und erhalten Sie Ihre Datei in Sekunden.", cta_btn: "Download starten",
+                privacy: "Datenschutzrichtlinie", terms: "Nutzungsbedingungen", copyright: "© 2026 GrabVid. Alle Rechte vorbehalten.",
+                modal_title: "Download-Optionen", modal_sub: "Format und Qualität auswählen:",
+                format1: "Video MP4 - 1080p", format2: "Video MP4 - 720p", format3: "Audio MP3 - 320kbps", format4: "Audio MP3 - 128kbps"
+            }
+        };
+
+        let currentLang = 'en';
+        let currentTheme = 'default';
+        let currentUrl = '';
+
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) el.placeholder = translations[lang][key];
+            });
+            document.documentElement.lang = lang;
+            document.getElementById('langLabel').textContent = { en:'English', ar:'العربية', ru:'Русский', fr:'Français', es:'Español', de:'Deutsch', zh:'中文', ja:'日本語', hi:'हिन्दी', pt:'Português' }[lang] || lang;
+            localStorage.setItem('grabvid_lang', lang);
+            closeAllModals();
+        }
+
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.body.classList.remove('theme-default', 'theme-dark', 'theme-emerald', 'theme-purple', 'theme-sunset', 'theme-ocean', 'theme-rose', 'theme-gold', 'theme-midnight', 'theme-forest');
+            if (theme !== 'default') document.body.classList.add('theme-' + theme);
+            localStorage.setItem('grabvid_theme', theme);
+            closeAllModals();
+        }
+
+        function closeAllModals() {
+            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+        }
+
+        function loadPreferences() {
+            const savedLang = localStorage.getItem('grabvid_lang');
+            const savedTheme = localStorage.getItem('grabvid_theme');
+            if (savedLang && translations[savedLang]) setLanguage(savedLang);
+            else setLanguage('en');
+            if (savedTheme) setTheme(savedTheme);
+            else setTheme('default');
+        }
+
+        document.getElementById('langBtn').addEventListener('click', () => document.getElementById('languageModal').classList.add('active'));
+        document.getElementById('themeBtn').addEventListener('click', () => document.getElementById('themeModal').classList.add('active'));
+        document.querySelectorAll('.lang-option').forEach(item => item.addEventListener('click', () => setLanguage(item.dataset.lang)));
+        document.querySelectorAll('.theme-card').forEach(card => card.addEventListener('click', () => setTheme(card.dataset.theme)));
+        document.getElementById('languageModalClose').addEventListener('click', closeAllModals);
+        document.getElementById('themeModalClose').addEventListener('click', closeAllModals);
+        document.querySelectorAll('.modal-overlay').forEach(overlay => overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAllModals(); }));
+
+        const mobileMenu = document.getElementById('mobileMenu');
+        document.getElementById('hamburger').addEventListener('click', () => mobileMenu.classList.add('active'));
+        document.getElementById('mobileMenuClose').addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        document.getElementById('mobileLangBtn').addEventListener('click', () => { document.getElementById('languageModal').classList.add('active'); mobileMenu.classList.remove('active'); });
+        document.getElementById('mobileThemeBtn').addEventListener('click', () => { document.getElementById('themeModal').classList.add('active'); mobileMenu.classList.remove('active'); });
+
+        document.getElementById('downloadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = document.getElementById('downloadInput');
+    const thumbnail = document.getElementById('videoThumbnail');
+    const resultsContainer = document.getElementById('downloadResults');
+    const analysisProgress = document.getElementById('analysisProgress');
+    const analysisText = document.getElementById('analysisText');
+    analysisProgress.style.display = 'block';
+    analysisText.textContent = 'Analyzing link...';
+    resultsContainer.style.display = 'none';
+    thumbnail.style.display = 'none';
+    if (input.value.trim()) {
+        currentUrl = input.value.trim();
+        fetch('api.php?action=info', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: currentUrl })
+})
+.then(res => res.json())
+.then(data => {
+    analysisProgress.style.display = 'none';
+    
+    // عرض الصورة المصغرة
+    if (data.thumbnail) {
+        thumbnail.src = data.thumbnail;
+        thumbnail.style.display = 'block';
+    }
+    
+    // عرض عنوان الفيديو (الحل المبسط)
+    const titleElement = document.getElementById('videoTitle');
+    if (data.title) {
+        titleElement.textContent = data.title;
+        titleElement.style.display = 'block';
+        console.log('Title:', data.title); // للتأكد من وصول البيانات
+    } else {
+        titleElement.style.display = 'none';
+    }
+
+    // عرض الصيغ المتاحة
+    resultsContainer.innerHTML = '';
+if (data.formats && data.formats.length) {
+    const isImage = data.formats[0].type === 'image';
+    if (isImage) {
+        const div = document.createElement('div');
+        div.className = 'format-option';
+        div.innerHTML = `
+            <span> ${data.title || 'Image'}</span>
+            <button class="download-format-btn" data-format-id="${data.formats[0].format_id}">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Download Image
+            </button>
+        `;
+        resultsContainer.appendChild(div);
+    } else {
+        data.formats.forEach(format => {
+            const div = document.createElement('div');
+            div.className = 'format-option';
+            div.innerHTML = `
+                <span>${format.quality} (${format.format})</span>
+                <button class="download-format-btn" data-format-id="${format.format_id}">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Download
+                </button>
+            `;
+            resultsContainer.appendChild(div);
+        });
+    }
+    resultsContainer.style.display = 'flex';
+} else {
+    resultsContainer.innerHTML = '<p>No formats available.</p>';
+    resultsContainer.style.display = 'block';
+}
+})
+.catch(err => {
+    analysisProgress.style.display = 'none';
+    resultsContainer.innerHTML = '<p>Error fetching video info.</p>';
+    resultsContainer.style.display = 'block';
+});
+        input.value = '';
+    }
+});
+
+document.getElementById('downloadResults').addEventListener('click', function(e) {
+    const btn = e.target.closest('.download-format-btn');
+    if (!btn) return;
+    const formatId = btn.getAttribute('data-format-id');
+    if (!currentUrl || !formatId) return;
+    window.location.href = 'api.php?action=download&url=' + encodeURIComponent(currentUrl) + '&format_id=' + encodeURIComponent(formatId);
+});
+
+        document.querySelectorAll('.faq-item').forEach(item => item.querySelector('.faq-question').addEventListener('click', () => item.classList.toggle('active')));
+
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => observer.observe(el));
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) target.scrollIntoView({ behavior: 'smooth' }); }));
+
+        loadPreferences();
+    </script>
+</body>
+</html>

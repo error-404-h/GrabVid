@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Extract Audio from TikTok - GrabVid</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        :root {
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-alt: #f1f5f9;
+            --border: #e2e8f0;
+            --border-hover: #cbd5e1;
+            --text: #0f172a;
+            --muted: #64748b;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0ea5e9;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #2563eb, #0ea5e9);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --radius: 1.2rem;
+            --transition: 0.3s ease;
+            --icon-color: #2563eb;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #eff6ff 0%, #f8fafc 100%);
+            --card-hover: rgba(37,99,235,0.05);
+            --feature-bg: #eff6ff;
+            --feature-icon-bg: #eff6ff;
+        }
+        body.theme-dark {
+            --bg: #0f172a;
+            --surface: #1e293b;
+            --surface-alt: #334155;
+            --border: #334155;
+            --border-hover: #475569;
+            --text: #f1f5f9;
+            --muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #06b6d4;
+            --accent: #f43f5e;
+            --gradient: linear-gradient(135deg, #3b82f6, #06b6d4);
+            --shadow: 0 4px 15px rgba(0,0,0,0.3);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.5);
+            --icon-color: #3b82f6;
+            --nav-bg: rgba(15,23,42,0.85);
+            --hero-bg: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+            --card-hover: rgba(59,130,246,0.05);
+            --feature-bg: #1e293b;
+            --feature-icon-bg: #1e293b;
+        }
+        body.theme-emerald {
+            --bg: #ecfdf5;
+            --surface: #ffffff;
+            --surface-alt: #d1fae5;
+            --border: #a7f3d0;
+            --border-hover: #6ee7b7;
+            --text: #064e3b;
+            --muted: #047857;
+            --primary: #059669;
+            --primary-dark: #047857;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --gradient: linear-gradient(135deg, #059669, #10b981);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #059669;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #d1fae5 0%, #ecfdf5 100%);
+            --card-hover: rgba(5,150,105,0.05);
+            --feature-bg: #d1fae5;
+            --feature-icon-bg: #d1fae5;
+        }
+        body.theme-purple {
+            --bg: #faf5ff;
+            --surface: #ffffff;
+            --surface-alt: #f3e8ff;
+            --border: #e9d5ff;
+            --border-hover: #d8b4fe;
+            --text: #3b0764;
+            --muted: #7e22ce;
+            --primary: #9333ea;
+            --primary-dark: #7e22ce;
+            --secondary: #a855f7;
+            --accent: #ec4899;
+            --gradient: linear-gradient(135deg, #9333ea, #a855f7);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #9333ea;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #f3e8ff 0%, #faf5ff 100%);
+            --card-hover: rgba(147,51,234,0.05);
+            --feature-bg: #f3e8ff;
+            --feature-icon-bg: #f3e8ff;
+        }
+        body.theme-sunset {
+            --bg: #fff7ed;
+            --surface: #ffffff;
+            --surface-alt: #ffedd5;
+            --border: #fed7aa;
+            --border-hover: #fdba74;
+            --text: #431407;
+            --muted: #9a3412;
+            --primary: #ea580c;
+            --primary-dark: #c2410c;
+            --secondary: #f97316;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #ea580c, #f97316);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #ea580c;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #ffedd5 0%, #fff7ed 100%);
+            --card-hover: rgba(234,88,12,0.05);
+            --feature-bg: #ffedd5;
+            --feature-icon-bg: #ffedd5;
+        }
+        body.theme-ocean {
+            --bg: #e0f2fe;
+            --surface: #ffffff;
+            --surface-alt: #bae6fd;
+            --border: #7dd3fc;
+            --border-hover: #38bdf8;
+            --text: #0c4a6e;
+            --muted: #0369a1;
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --secondary: #0ea5e9;
+            --accent: #f43f5e;
+            --gradient: linear-gradient(135deg, #0284c7, #0ea5e9);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #0284c7;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 100%);
+            --card-hover: rgba(2,132,199,0.05);
+            --feature-bg: #bae6fd;
+            --feature-icon-bg: #bae6fd;
+        }
+        body.theme-rose {
+            --bg: #fff1f2;
+            --surface: #ffffff;
+            --surface-alt: #ffe4e6;
+            --border: #fecdd3;
+            --border-hover: #fda4af;
+            --text: #881337;
+            --muted: #9f1239;
+            --primary: #e11d48;
+            --primary-dark: #be123c;
+            --secondary: #f43f5e;
+            --accent: #fb7185;
+            --gradient: linear-gradient(135deg, #e11d48, #f43f5e);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #e11d48;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #ffe4e6 0%, #fff1f2 100%);
+            --card-hover: rgba(225,29,72,0.05);
+            --feature-bg: #ffe4e6;
+            --feature-icon-bg: #ffe4e6;
+        }
+        body.theme-gold {
+            --bg: #fffbeb;
+            --surface: #ffffff;
+            --surface-alt: #fef3c7;
+            --border: #fde68a;
+            --border-hover: #fcd34d;
+            --text: #78350f;
+            --muted: #92400e;
+            --primary: #d97706;
+            --primary-dark: #b45309;
+            --secondary: #f59e0b;
+            --accent: #dc2626;
+            --gradient: linear-gradient(135deg, #d97706, #f59e0b);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #d97706;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #fef3c7 0%, #fffbeb 100%);
+            --card-hover: rgba(217,119,6,0.05);
+            --feature-bg: #fef3c7;
+            --feature-icon-bg: #fef3c7;
+        }
+        body.theme-midnight {
+            --bg: #1e1b4b;
+            --surface: #312e81;
+            --surface-alt: #4338ca;
+            --border: #4f46e5;
+            --border-hover: #6366f1;
+            --text: #e0e7ff;
+            --muted: #a5b4fc;
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --secondary: #a78bfa;
+            --accent: #f472b6;
+            --gradient: linear-gradient(135deg, #818cf8, #a78bfa);
+            --shadow: 0 4px 15px rgba(0,0,0,0.3);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.5);
+            --icon-color: #818cf8;
+            --nav-bg: rgba(30,27,75,0.85);
+            --hero-bg: linear-gradient(180deg, #312e81 0%, #1e1b4b 100%);
+            --card-hover: rgba(129,140,248,0.05);
+            --feature-bg: #312e81;
+            --feature-icon-bg: #312e81;
+        }
+        body.theme-forest {
+            --bg: #f0fdf4;
+            --surface: #ffffff;
+            --surface-alt: #dcfce7;
+            --border: #bbf7d0;
+            --border-hover: #86efac;
+            --text: #14532d;
+            --muted: #166534;
+            --primary: #16a34a;
+            --primary-dark: #15803d;
+            --secondary: #22c55e;
+            --accent: #ef4444;
+            --gradient: linear-gradient(135deg, #16a34a, #22c55e);
+            --shadow: 0 4px 15px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.1);
+            --icon-color: #16a34a;
+            --nav-bg: rgba(255,255,255,0.85);
+            --hero-bg: linear-gradient(180deg, #dcfce7 0%, #f0fdf4 100%);
+            --card-hover: rgba(22,163,74,0.05);
+            --feature-bg: #dcfce7;
+            --feature-icon-bg: #dcfce7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            transition: background 0.3s, color 0.3s;
+        }
+        .container {
+            width: 92%;
+            max-width: 1250px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 5;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        nav.scrolled {
+            background: var(--nav-bg);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            padding: 0.7rem 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: #fff;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--muted);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--text);
+        }
+        .nav-cta {
+            background: var(--primary);
+            border: none;
+            color: #fff;
+            padding: 0.6rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-cta:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            z-index: 2;
+        }
+        .hamburger span {
+            width: 26px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .lang-btn, .theme-btn {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .lang-btn:hover, .theme-btn:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .lang-btn svg, .theme-btn svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--icon-color);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            z-index: 150;
+            transition: right 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            padding: 1.5rem;
+            overflow-y: auto;
+            border-left: 1px solid var(--border);
+        }
+        .mobile-menu.active {
+            right: 0;
+        }
+        .mobile-menu-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .mobile-nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .mobile-actions {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        .mobile-lang-select, .mobile-theme-select {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            cursor: pointer;
+            background: var(--surface-alt);
+        }
+        .hero {
+            padding: 7rem 0 4rem;
+            text-align: center;
+            background: var(--hero-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(37,99,235,0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.2rem;
+            color: var(--text);
+        }
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+        .download-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 9999px;
+            padding: 0.3rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        .download-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            background: transparent;
+            color: var(--text);
+            min-width: 0;
+        }
+        .download-btn {
+            background: var(--gradient);
+            border: none;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .download-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(37,99,235,0.3);
+        }
+        .video-thumbnail {
+            max-width: 200px;
+            max-height: 120px;
+            border-radius: 0.8rem;
+            object-fit: cover;
+            margin: 1rem auto 0;
+            display: none;
+            box-shadow: var(--shadow);
+        }
+        .download-results {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .platform-badge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: border-color 0.3s, transform 0.3s;
+            font-weight: 500;
+        }
+        .platform-badge:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .section {
+            padding: 5rem 0;
+        }
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+        .section-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+        .section-header h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+        .section-header p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.2rem 1.8rem;
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--card-hover);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .feature-card:hover::after {
+            opacity: 1;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary);
+        }
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--feature-icon-bg);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--icon-color);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        .feature-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 1;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+        .step-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem 1.8rem;
+            position: relative;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .step-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1.2rem;
+            font-size: 1.2rem;
+        }
+        .step-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .step-card p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .supported-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .platform-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            min-width: 140px;
+            justify-content: center;
+        }
+        .platform-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+        .platform-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--icon-color);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+        .testimonial-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.8rem;
+            transition: var(--transition);
+        }
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .testimonial-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .testimonial-author h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .testimonial-author p {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-style: normal;
+        }
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .faq-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+        }
+        .faq-question span {
+            transition: transform 0.3s;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+        .faq-item.active .faq-question span {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--muted);
+            padding: 0 1.5rem;
+            font-size: 0.95rem;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.2rem;
+        }
+        .cta-section {
+            background: var(--gradient);
+            border-radius: 2rem;
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+        }
+        .cta-btn {
+            background: #fff;
+            color: var(--primary);
+            padding: 0.9rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+            position: relative;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: var(--text);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 300;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-content {
+            background: var(--surface);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .modal-close {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text);
+        }
+        .format-option {
+            background: var(--surface-alt);
+            border: 1px solid var(--border);
+            border-radius: 0.8rem;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: var(--transition);
+        }
+        .format-option:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .format-option span {
+            font-weight: 500;
+        }
+        .download-format-btn {
+            background: var(--gradient);
+            border: none;
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
+        }
+        .download-format-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+        }
+        .theme-thumb-preview {
+            width: 100%;
+            height: 100px;
+            background-size: cover;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .theme-card {
+            text-align: center;
+            cursor: pointer;
+            padding: 1rem;
+            border-radius: 0.8rem;
+            border: 1px solid var(--border);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .theme-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow);
+        }
+        .theme-card.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 1rem;
+            border-radius: 0.8rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .lang-option:hover {
+            background: var(--surface-alt);
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+        .blog-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .blog-thumb {
+            height: 160px;
+            background: var(--surface-alt);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        .blog-body {
+            padding: 1.5rem;
+        }
+        .blog-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .blog-body p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            background: var(--surface);
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-item h4 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .stat-item p {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+        .progress-container {
+            display: none;
+            margin-top: 1rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 0.3rem;
+            box-shadow: var(--shadow);
+        }
+        .progress-bar {
+            height: 20px;
+            background: var(--gradient);
+            border-radius: 9999px;
+            width: 0%;
+            animation: progressAnimation 1.5s ease-in-out infinite;
+        }
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        .progress-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            margin-top: 0.5rem;
+        }
+        .format-option {
+            padding: 0.4rem 0.7rem !important;
+            font-size: 0.8rem !important;
+            gap: 0.5rem !important;
+            border-radius: 0.5rem !important;
+        }
+        .format-option span {
+            font-size: 0.8rem !important;
+            font-weight: 500 !important;
+        }
+        .download-format-btn {
+            padding: 0.3rem 0.8rem !important;
+            font-size: 0.75rem !important;
+            border-radius: 9999px !important;
+        }
+        .download-format-btn svg {
+            width: 12px !important;
+            height: 12px !important;
+        }
+        .article-hero {
+            padding: 7rem 0 3rem;
+            text-align: center;
+            background: var(--hero-bg);
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .article-content h2 {
+            font-size: 1.8rem;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--text);
+        }
+        .article-content p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .article-content ul, .article-content ol {
+            color: var(--muted);
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            justify-content: center;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .back-btn:hover {
+            text-decoration: underline;
+        }
+        .article-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin: 1rem 0;
+        }
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta, .nav-actions {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero {
+                padding: 5.5rem 0 3rem;
+            }
+            .download-form {
+                flex-direction: column;
+                border-radius: 1rem;
+                padding: 0.5rem;
+            }
+            .download-input {
+                padding: 0.8rem 1rem;
+            }
+            .download-btn {
+                width: 100%;
+                justify-content: center;
+                padding: 0.8rem;
+            }
+            .section {
+                padding: 3.5rem 0;
+            }
+            .cta-section {
+                padding: 2.5rem 1.5rem;
+            }
+            .article-hero {
+                padding: 5.5rem 0 2rem;
+            }
+            .article-content {
+                padding: 1.5rem 1rem;
+            }
+            .article-meta {
+                gap: 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+        #languageList .lang-option svg {
+            width: 24px !important;
+            height: 24px !important;
+            flex-shrink: 0;
+        }
+        .lang-option {
+            gap: 0.8rem !important;
+            font-size: 0.95rem !important;
+            padding: 0.6rem 0.8rem !important;
+        }
+        .lang-btn svg {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        .mobile-lang-select svg,
+        .mobile-theme-select svg {
+            width: 20px !important;
+            height: 20px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                GrabVid
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="index.html#how-it-works" data-i18n="nav_how">How It Works</a></li>
+                <li><a href="index.html#platforms" data-i18n="nav_platforms">Platforms</a></li>
+                <li><a href="index.html#blog" data-i18n="nav_blog">Blog</a></li>
+                <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+                <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="lang-btn" id="langBtn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm-1-13v5.5c-.5-.3-1.1-.5-1.8-.5-1.4 0-2.5 1.1-2.5 2.5S7.8 15 9.2 15s2.5-1.1 2.5-2.5V7h3v3h2V7h-5z"/></svg>
+                    <span id="langLabel">English</span>
+                </div>
+                <div class="theme-btn" id="themeBtn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" style="fill: var(--icon-color);"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 2v14a7 7 0 000-14z"/></svg>
+                    <span data-i18n="theme">Theme</span>
+                </div>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="index.html#download" class="nav-cta" data-i18n="nav_download">Download Now</a>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#features" data-i18n="nav_features">Features</a></li>
+            <li><a href="index.html#how-it-works" data-i18n="nav_how">How It Works</a></li>
+            <li><a href="index.html#platforms" data-i18n="nav_platforms">Platforms</a></li>
+            <li><a href="index.html#blog" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="index.html#about" data-i18n="nav_about">About</a></li>
+            <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <div class="mobile-lang-select" id="mobileLangBtn">
+                <svg viewBox="0 0 24 24" width="20" height="20" style="fill: var(--icon-color);"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span data-i18n="language">Language</span>
+            </div>
+            <div class="mobile-theme-select" id="mobileThemeBtn">
+                <svg viewBox="0 0 24 24" width="20" height="20" style="fill: var(--icon-color);"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 2v14a7 7 0 000-14z"/></svg>
+                <span data-i18n="theme">Theme</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="languageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="languageModalClose">&times;</button>
+            <h2 data-i18n="choose_language">Choose Language</h2>
+            <p data-i18n="choose_language_sub">Select your preferred language</p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1.5rem;" id="languageList">
+                <div class="lang-option" data-lang="en">🇬🇧 English</div>
+                <div class="lang-option" data-lang="ar">🇸🇦 العربية</div>
+                <div class="lang-option" data-lang="ru">🇷🇺 Русский</div>
+                <div class="lang-option" data-lang="fr">🇫🇷 Français</div>
+                <div class="lang-option" data-lang="es">🇪🇸 Español</div>
+                <div class="lang-option" data-lang="de">🇩🇪 Deutsch</div>
+                <div class="lang-option" data-lang="zh">🇨🇳 中文</div>
+                <div class="lang-option" data-lang="ja">🇯🇵 日本語</div>
+                <div class="lang-option" data-lang="hi">🇮🇳 हिन्दी</div>
+                <div class="lang-option" data-lang="pt">🇵🇹 Português</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" id="themeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="themeModalClose">&times;</button>
+            <h2 data-i18n="choose_theme">Choose Theme</h2>
+            <p data-i18n="choose_theme_sub">Select your preferred style</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;margin-top:1.5rem;" id="themeList">
+                <div class="theme-card" data-theme="default"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #eff6ff, #2563eb);"></div><span>Default</span></div>
+                <div class="theme-card" data-theme="dark"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #1e293b, #0f172a);"></div><span>Dark</span></div>
+                <div class="theme-card" data-theme="emerald"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #d1fae5, #059669);"></div><span>Emerald</span></div>
+                <div class="theme-card" data-theme="purple"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #f3e8ff, #9333ea);"></div><span>Purple</span></div>
+                <div class="theme-card" data-theme="sunset"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #ffedd5, #ea580c);"></div><span>Sunset</span></div>
+                <div class="theme-card" data-theme="ocean"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #bae6fd, #0284c7);"></div><span>Ocean</span></div>
+                <div class="theme-card" data-theme="rose"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #ffe4e6, #e11d48);"></div><span>Rose</span></div>
+                <div class="theme-card" data-theme="gold"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #fef3c7, #d97706);"></div><span>Gold</span></div>
+                <div class="theme-card" data-theme="midnight"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #312e81, #1e1b4b);"></div><span>Midnight</span></div>
+                <div class="theme-card" data-theme="forest"><div class="theme-thumb-preview" style="background: linear-gradient(135deg, #dcfce7, #16a34a);"></div><span>Forest</span></div>
+            </div>
+        </div>
+    </div>
+    <section class="article-hero">
+        <div class="container">
+            <a href="index.html#blog" class="back-btn">← <span data-i18n="back_to_blog">Back to Blog</span></a>
+            <h1 data-i18n="article_title">Extract Audio from TikTok</h1>
+            <div class="article-meta">
+                <span>📅 <span data-i18n="article_date">August 21, 2026</span></span>
+                <span>⏱️ <span data-i18n="article_read">4 min read</span></span>
+                <span>👤 <span data-i18n="article_author">GrabVid Team</span></span>
+            </div>
+        </div>
+    </section>
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="article-content">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&h=400&fit=crop" alt="TikTok Audio" class="article-image">
+                <h2 data-i18n="section1_title">Introduction</h2>
+                <p data-i18n="section1_text">TikTok is full of amazing sounds and music. Sometimes you want to save just the audio without the video. GrabVid makes this process quick and easy.</p>
+                <h2 data-i18n="section2_title">Step 1: Copy the TikTok Video Link</h2>
+                <p data-i18n="section2_text">Open TikTok, find the video with the audio you want, and copy its link from the share button.</p>
+                <h2 data-i18n="section3_title">Step 2: Paste the Link</h2>
+                <p data-i18n="section3_text">Go to GrabVid and paste the link in the download box. Click the Download button.</p>
+                <h2 data-i18n="section4_title">Step 3: Choose Audio Format</h2>
+                <p data-i18n="section4_text">From the available formats, select the audio option (MP3 or M4A) and your preferred quality.</p>
+                <h2 data-i18n="section5_title">Step 4: Download</h2>
+                <p data-i18n="section5_text">Click the download button and save the audio file to your device. You can now use it offline.</p>
+                <h2 data-i18n="section6_title">Conclusion</h2>
+                <p data-i18n="section6_text">Extracting audio from TikTok has never been easier. With GrabVid, you can save your favorite sounds and music in just a few clicks.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="font-size: 1.2rem;">
+                <div class="logo-icon" style="width: 28px; height: 28px;">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 14px; height: 14px;"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                GrabVid
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="index.html#how-it-works" data-i18n="nav_how">How It Works</a></li>
+                <li><a href="index.html#platforms" data-i18n="nav_platforms">Platforms</a></li>
+                <li><a href="index.html#faq" data-i18n="nav_faq">FAQ</a></li>
+                <li><a href="terms.html" data-i18n="privacy">Privacy Policy</a></li>
+                <li><a href="terms.html" data-i18n="terms">Terms of Use</a></li>
+            </ul>
+            <p data-i18n="copyright">© 2026 GrabVid. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const translations = {
+            en: {
+                nav_features: "Features", nav_how: "How It Works", nav_platforms: "Platforms", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "About", nav_download: "Download Now",
+                theme: "Theme", language: "Language", choose_language: "Choose Language", choose_language_sub: "Select your preferred language",
+                choose_theme: "Choose Theme", choose_theme_sub: "Select your preferred style",
+                back_to_blog: "Back to Blog",
+                article_title: "Extract Audio from TikTok",
+                article_date: "August 21, 2026",
+                article_read: "4 min read",
+                article_author: "GrabVid Team",
+                section1_title: "Introduction",
+                section1_text: "TikTok is full of amazing sounds and music. Sometimes you want to save just the audio without the video. GrabVid makes this process quick and easy.",
+                section2_title: "Step 1: Copy the TikTok Video Link",
+                section2_text: "Open TikTok, find the video with the audio you want, and copy its link from the share button.",
+                section3_title: "Step 2: Paste the Link",
+                section3_text: "Go to GrabVid and paste the link in the download box. Click the Download button.",
+                section4_title: "Step 3: Choose Audio Format",
+                section4_text: "From the available formats, select the audio option (MP3 or M4A) and your preferred quality.",
+                section5_title: "Step 4: Download",
+                section5_text: "Click the download button and save the audio file to your device. You can now use it offline.",
+                section6_title: "Conclusion",
+                section6_text: "Extracting audio from TikTok has never been easier. With GrabVid, you can save your favorite sounds and music in just a few clicks.",
+                privacy: "Privacy Policy", terms: "Terms of Use", copyright: "© 2026 GrabVid. All rights reserved."
+            },
+            ar: {
+                nav_features: "المميزات", nav_how: "كيف يعمل", nav_platforms: "المنصات", nav_faq: "الأسئلة الشائعة", nav_blog: "المدونة", nav_about: "من نحن", nav_download: "حمّل الآن",
+                theme: "المظهر", language: "اللغة", choose_language: "اختر اللغة", choose_language_sub: "اختر لغتك المفضلة",
+                choose_theme: "اختر المظهر", choose_theme_sub: "اختر النمط المفضل لديك",
+                back_to_blog: "← العودة إلى المدونة",
+                article_title: "استخراج الصوت من تيك توك",
+                article_date: "٢١ أغسطس ٢٠٢٦",
+                article_read: "٤ دقائق قراءة",
+                article_author: "فريق GrabVid",
+                section1_title: "مقدمة",
+                section1_text: "تيك توك مليء بالأصوات والموسيقى الرائعة. في بعض الأحيان تريد حفظ الصوت فقط بدون الفيديو. GrabVid يجعل هذه العملية سريعة وسهلة.",
+                section2_title: "الخطوة ١: انسخ رابط فيديو تيك توك",
+                section2_text: "افتح تيك توك، ابحث عن الفيديو الذي يحتوي على الصوت الذي تريده، وانسخ الرابط من زر المشاركة.",
+                section3_title: "الخطوة ٢: الصق الرابط",
+                section3_text: "اذهب إلى GrabVid والصق الرابط في مربع التحميل. اضغط على زر التحميل.",
+                section4_title: "الخطوة ٣: اختر صيغة الصوت",
+                section4_text: "من الصيغ المتاحة، اختر خيار الصوت (MP3 أو M4A) والجودة المفضلة لديك.",
+                section5_title: "الخطوة ٤: حمّل",
+                section5_text: "اضغط على زر التحميل واحفظ ملف الصوت على جهازك. يمكنك الآن استخدامه دون اتصال.",
+                section6_title: "الخاتمة",
+                section6_text: "استخراج الصوت من تيك توك أصبح أسهل من أي وقت مضى. مع GrabVid يمكنك حفظ الأصوات والموسيقى المفضلة لديك ببضع نقرات فقط.",
+                privacy: "سياسة الخصوصية", terms: "شروط الاستخدام", copyright: "© 2026 GrabVid. جميع الحقوق محفوظة."
+            },
+            ru: {
+                nav_features: "Возможности", nav_how: "Как работает", nav_platforms: "Платформы", nav_faq: "Вопросы", nav_blog: "Блог", nav_about: "О нас", nav_download: "Скачать сейчас",
+                theme: "Тема", language: "Язык", choose_language: "Выберите язык", choose_language_sub: "Выберите предпочтительный язык",
+                choose_theme: "Выберите тему", choose_theme_sub: "Выберите предпочтительный стиль",
+                back_to_blog: "← Назад к блогу",
+                article_title: "Извлечение аудио из TikTok",
+                article_date: "21 августа 2026",
+                article_read: "4 минуты чтения",
+                article_author: "Команда GrabVid",
+                section1_title: "Введение",
+                section1_text: "TikTok полон удивительных звуков и музыки. Иногда вы хотите сохранить только аудио без видео. GrabVid делает этот процесс быстрым и простым.",
+                section2_title: "Шаг 1: Скопируйте ссылку на видео TikTok",
+                section2_text: "Откройте TikTok, найдите видео с нужным аудио и скопируйте ссылку из кнопки поделиться.",
+                section3_title: "Шаг 2: Вставьте ссылку",
+                section3_text: "Перейдите на GrabVid и вставьте ссылку в поле загрузки. Нажмите кнопку Загрузить.",
+                section4_title: "Шаг 3: Выберите аудиоформат",
+                section4_text: "Из доступных форматов выберите аудио (MP3 или M4A) и предпочтительное качество.",
+                section5_title: "Шаг 4: Скачайте",
+                section5_text: "Нажмите кнопку загрузки и сохраните аудиофайл на устройство. Теперь вы можете использовать его офлайн.",
+                section6_title: "Заключение",
+                section6_text: "Извлечение аудио из TikTok еще никогда не было таким простым. С GrabVid вы можете сохранять любимые звуки и музыку всего за несколько кликов.",
+                privacy: "Политика конфиденциальности", terms: "Условия использования", copyright: "© 2026 GrabVid. Все права защищены."
+            },
+            fr: {
+                nav_features: "Fonctionnalités", nav_how: "Comment ça marche", nav_platforms: "Plateformes", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "À propos", nav_download: "Télécharger",
+                theme: "Thème", language: "Langue", choose_language: "Choisir la langue", choose_language_sub: "Sélectionnez votre langue préférée",
+                choose_theme: "Choisir le thème", choose_theme_sub: "Sélectionnez votre style préféré",
+                back_to_blog: "← Retour au blog",
+                article_title: "Extraire l'audio de TikTok",
+                article_date: "21 août 2026",
+                article_read: "4 min de lecture",
+                article_author: "Équipe GrabVid",
+                section1_title: "Introduction",
+                section1_text: "TikTok regorge de sons et de musiques incroyables. Parfois, vous voulez sauvegarder uniquement l'audio sans la vidéo. GrabVid rend ce processus rapide et facile.",
+                section2_title: "Étape 1: Copiez le lien de la vidéo TikTok",
+                section2_text: "Ouvrez TikTok, trouvez la vidéo avec l'audio souhaité et copiez son lien depuis le bouton de partage.",
+                section3_title: "Étape 2: Collez le lien",
+                section3_text: "Allez sur GrabVid et collez le lien dans la boîte de téléchargement. Cliquez sur le bouton Télécharger.",
+                section4_title: "Étape 3: Choisissez le format audio",
+                section4_text: "Parmi les formats disponibles, sélectionnez l'option audio (MP3 ou M4A) et votre qualité préférée.",
+                section5_title: "Étape 4: Téléchargez",
+                section5_text: "Cliquez sur le bouton de téléchargement et enregistrez le fichier audio sur votre appareil. Vous pouvez maintenant l'utiliser hors ligne.",
+                section6_title: "Conclusion",
+                section6_text: "Extraire l'audio de TikTok n'a jamais été aussi simple. Avec GrabVid, vous pouvez sauvegarder vos sons et musiques préférés en quelques clics.",
+                privacy: "Politique de confidentialité", terms: "Conditions d'utilisation", copyright: "© 2026 GrabVid. Tous droits réservés."
+            },
+            es: {
+                nav_features: "Características", nav_how: "Cómo funciona", nav_platforms: "Plataformas", nav_faq: "Preguntas frecuentes", nav_blog: "Blog", nav_about: "Acerca de", nav_download: "Descargar ahora",
+                theme: "Tema", language: "Idioma", choose_language: "Elegir idioma", choose_language_sub: "Selecciona tu idioma preferido",
+                choose_theme: "Elegir tema", choose_theme_sub: "Selecciona tu estilo preferido",
+                back_to_blog: "← Volver al blog",
+                article_title: "Extraer audio de TikTok",
+                article_date: "21 de agosto de 2026",
+                article_read: "4 min de lectura",
+                article_author: "Equipo GrabVid",
+                section1_title: "Introducción",
+                section1_text: "TikTok está lleno de sonidos y música increíbles. A veces quieres guardar solo el audio sin el video. GrabVid hace que este proceso sea rápido y fácil.",
+                section2_title: "Paso 1: Copia el enlace del video de TikTok",
+                section2_text: "Abre TikTok, encuentra el video con el audio que deseas y copia su enlace desde el botón de compartir.",
+                section3_title: "Paso 2: Pega el enlace",
+                section3_text: "Ve a GrabVid y pega el enlace en el cuadro de descarga. Haz clic en el botón Descargar.",
+                section4_title: "Paso 3: Elige el formato de audio",
+                section4_text: "De los formatos disponibles, selecciona la opción de audio (MP3 o M4A) y tu calidad preferida.",
+                section5_title: "Paso 4: Descarga",
+                section5_text: "Haz clic en el botón de descarga y guarda el archivo de audio en tu dispositivo. Ahora puedes usarlo sin conexión.",
+                section6_title: "Conclusión",
+                section6_text: "Extraer audio de TikTok nunca ha sido tan fácil. Con GrabVid, puedes guardar tus sonidos y música favoritos en solo unos clics.",
+                privacy: "Política de privacidad", terms: "Términos de uso", copyright: "© 2026 GrabVid. Todos los derechos reservados."
+            },
+            de: {
+                nav_features: "Funktionen", nav_how: "So funktioniert's", nav_platforms: "Plattformen", nav_faq: "FAQ", nav_blog: "Blog", nav_about: "Über uns", nav_download: "Jetzt herunterladen",
+                theme: "Thema", language: "Sprache", choose_language: "Sprache wählen", choose_language_sub: "Wählen Sie Ihre bevorzugte Sprache",
+                choose_theme: "Thema wählen", choose_theme_sub: "Wählen Sie Ihren bevorzugten Stil",
+                back_to_blog: "← Zurück zum Blog",
+                article_title: "Audio aus TikTok extrahieren",
+                article_date: "21. August 2026",
+                article_read: "4 Min. Lesezeit",
+                article_author: "GrabVid Team",
+                section1_title: "Einleitung",
+                section1_text: "TikTok ist voller erstaunlicher Sounds und Musik. Manchmal möchten Sie nur das Audio ohne das Video speichern. GrabVid macht diesen Prozess schnell und einfach.",
+                section2_title: "Schritt 1: Kopieren Sie den TikTok-Video-Link",
+                section2_text: "Öffnen Sie TikTok, suchen Sie das Video mit dem gewünschten Audio und kopieren Sie den Link über die Teilen-Schaltfläche.",
+                section3_title: "Schritt 2: Fügen Sie den Link ein",
+                section3_text: "Gehen Sie zu GrabVid und fügen Sie den Link in das Download-Feld ein. Klicken Sie auf die Schaltfläche Herunterladen.",
+                section4_title: "Schritt 3: Wählen Sie das Audioformat",
+                section4_text: "Wählen Sie aus den verfügbaren Formaten die Audio-Option (MP3 oder M4A) und Ihre bevorzugte Qualität.",
+                section5_title: "Schritt 4: Herunterladen",
+                section5_text: "Klicken Sie auf die Download-Schaltfläche und speichern Sie die Audiodatei auf Ihrem Gerät. Sie können sie jetzt offline verwenden.",
+                section6_title: "Fazit",
+                section6_text: "Das Extrahieren von Audio aus TikTok war noch nie so einfach. Mit GrabVid können Sie Ihre Lieblings-Sounds und Musik mit nur wenigen Klicks speichern.",
+                privacy: "Datenschutzrichtlinie", terms: "Nutzungsbedingungen", copyright: "© 2026 GrabVid. Alle Rechte vorbehalten."
+            },
+            zh: {
+                nav_features: "功能", nav_how: "工作原理", nav_platforms: "平台", nav_faq: "常见问题", nav_blog: "博客", nav_about: "关于", nav_download: "立即下载",
+                theme: "主题", language: "语言", choose_language: "选择语言", choose_language_sub: "选择您的首选语言",
+                choose_theme: "选择主题", choose_theme_sub: "选择您喜欢的样式",
+                back_to_blog: "← 返回博客",
+                article_title: "从TikTok提取音频",
+                article_date: "2026年8月21日",
+                article_read: "4分钟阅读",
+                article_author: "GrabVid团队",
+                section1_title: "简介",
+                section1_text: "TikTok充满了令人惊叹的声音和音乐。有时您只想保存音频而不需要视频。GrabVid让这个过程变得快速而简单。",
+                section2_title: "步骤1：复制TikTok视频链接",
+                section2_text: "打开TikTok，找到您想要音频的视频，然后从分享按钮复制链接。",
+                section3_title: "步骤2：粘贴链接",
+                section3_text: "前往GrabVid并将链接粘贴到下载框中。点击下载按钮。",
+                section4_title: "步骤3：选择音频格式",
+                section4_text: "从可用格式中，选择音频选项（MP3或M4A）和您喜欢的质量。",
+                section5_title: "步骤4：下载",
+                section5_text: "点击下载按钮并将音频文件保存到您的设备。您现在可以离线使用它。",
+                section6_title: "结论",
+                section6_text: "从TikTok提取音频从未如此简单。使用GrabVid，只需点击几下即可保存您喜爱的声音和音乐。",
+                privacy: "隐私政策", terms: "使用条款", copyright: "© 2026 GrabVid. 保留所有权利。"
+            },
+            ja: {
+                nav_features: "機能", nav_how: "仕組み", nav_platforms: "プラットフォーム", nav_faq: "よくある質問", nav_blog: "ブログ", nav_about: "について", nav_download: "今すぐダウンロード",
+                theme: "テーマ", language: "言語", choose_language: "言語を選択", choose_language_sub: "希望の言語を選択してください",
+                choose_theme: "テーマを選択", choose_theme_sub: "希望のスタイルを選択してください",
+                back_to_blog: "← ブログに戻る",
+                article_title: "TikTokからオーディオを抽出する",
+                article_date: "2026年8月21日",
+                article_read: "4分で読める",
+                article_author: "GrabVidチーム",
+                section1_title: "はじめに",
+                section1_text: "TikTokには素晴らしいサウンドと音楽が溢れています。ビデオなしでオーディオだけを保存したい場合があります。GrabVidはこのプロセスを迅速かつ簡単にします。",
+                section2_title: "ステップ1：TikTokビデオのリンクをコピー",
+                section2_text: "TikTokを開き、目的のオーディオがあるビデオを見つけて、共有ボタンからリンクをコピーします。",
+                section3_title: "ステップ2：リンクを貼り付け",
+                section3_text: "GrabVidにアクセスし、リンクをダウンロードボックスに貼り付けます。ダウンロードボタンをクリックします。",
+                section4_title: "ステップ3：オーディオ形式を選択",
+                section4_text: "利用可能な形式から、オーディオオプション（MP3またはM4A）と希望の品質を選択します。",
+                section5_title: "ステップ4：ダウンロード",
+                section5_text: "ダウンロードボタンをクリックして、オーディオファイルをデバイスに保存します。これでオフラインで使用できます。",
+                section6_title: "結論",
+                section6_text: "TikTokからのオーディオ抽出はかつてないほど簡単になりました。GrabVidを使用すると、数回クリックするだけでお気に入りのサウンドと音楽を保存できます。",
+                privacy: "プライバシーポリシー", terms: "利用規約", copyright: "© 2026 GrabVid. 全著作権所有。"
+            },
+            hi: {
+                nav_features: "विशेषताएँ", nav_how: "यह कैसे काम करता है", nav_platforms: "प्लेटफॉर्म", nav_faq: "सामान्य प्रश्न", nav_blog: "ब्लॉग", nav_about: "हमारे बारे में", nav_download: "अभी डाउनलोड करें",
+                theme: "थीम", language: "भाषा", choose_language: "भाषा चुनें", choose_language_sub: "अपनी पसंदीदा भाषा चुनें",
+                choose_theme: "थीम चुनें", choose_theme_sub: "अपनी पसंदीदा शैली चुनें",
+                back_to_blog: "← ब्लॉग पर वापस जाएं",
+                article_title: "TikTok से ऑडियो निकालें",
+                article_date: "21 अगस्त 2026",
+                article_read: "4 मिनट पढ़ें",
+                article_author: "GrabVid टीम",
+                section1_title: "परिचय",
+                section1_text: "TikTok अद्भुत ध्वनियों और संगीत से भरा है। कभी-कभी आप वीडियो के बिना केवल ऑडियो सहेजना चाहते हैं। GrabVid इस प्रक्रिया को त्वरित और आसान बनाता है।",
+                section2_title: "चरण 1: TikTok वीडियो लिंक कॉपी करें",
+                section2_text: "TikTok खोलें, जिस वीडियो का ऑडियो चाहिए उसे ढूंढें, और शेयर बटन से उसका लिंक कॉपी करें।",
+                section3_title: "चरण 2: लिंक पेस्ट करें",
+                section3_text: "GrabVid पर जाएं और डाउनलोड बॉक्स में लिंक पेस्ट करें। डाउनलोड बटन पर क्लिक करें।",
+                section4_title: "चरण 3: ऑडियो प्रारूप चुनें",
+                section4_text: "उपलब्ध प्रारूपों में से, ऑडियो विकल्प (MP3 या M4A) और अपनी पसंदीदा गुणवत्ता चुनें।",
+                section5_title: "चरण 4: डाउनलोड करें",
+                section5_text: "डाउनलोड बटन पर क्लिक करें और ऑडियो फ़ाइल को अपने डिवाइस पर सहेजें। अब आप इसे ऑफलाइन उपयोग कर सकते हैं।",
+                section6_title: "निष्कर्ष",
+                section6_text: "TikTok से ऑडियो निकालना कभी इतना आसान नहीं रहा। GrabVid के साथ, आप कुछ ही क्लिक में अपनी पसंदीदा ध्वनियाँ और संगीत सहेज सकते हैं।",
+                privacy: "गोपनीयता नीति", terms: "उपयोग की शर्तें", copyright: "© 2026 GrabVid. सर्वाधिकार सुरक्षित।"
+            },
+            pt: {
+                nav_features: "Recursos", nav_how: "Como funciona", nav_platforms: "Plataformas", nav_faq: "Perguntas frequentes", nav_blog: "Blog", nav_about: "Sobre", nav_download: "Baixar agora",
+                theme: "Tema", language: "Idioma", choose_language: "Escolher idioma", choose_language_sub: "Selecione seu idioma preferido",
+                choose_theme: "Escolher tema", choose_theme_sub: "Selecione seu estilo preferido",
+                back_to_blog: "← Voltar ao blog",
+                article_title: "Extrair áudio do TikTok",
+                article_date: "21 de agosto de 2026",
+                article_read: "4 min de leitura",
+                article_author: "Equipe GrabVid",
+                section1_title: "Introdução",
+                section1_text: "O TikTok está cheio de sons e músicas incríveis. Às vezes você quer salvar apenas o áudio sem o vídeo. O GrabVid torna esse processo rápido e fácil.",
+                section2_title: "Passo 1: Copie o link do vídeo do TikTok",
+                section2_text: "Abra o TikTok, encontre o vídeo com o áudio desejado e copie o link do botão de compartilhar.",
+                section3_title: "Passo 2: Cole o link",
+                section3_text: "Vá para o GrabVid e cole o link na caixa de download. Clique no botão Baixar.",
+                section4_title: "Passo 3: Escolha o formato de áudio",
+                section4_text: "Dos formatos disponíveis, selecione a opção de áudio (MP3 ou M4A) e sua qualidade preferida.",
+                section5_title: "Passo 4: Baixe",
+                section5_text: "Clique no botão de download e salve o arquivo de áudio no seu dispositivo. Agora você pode usá-lo offline.",
+                section6_title: "Conclusão",
+                section6_text: "Extrair áudio do TikTok nunca foi tão fácil. Com o GrabVid, você pode salvar seus sons e músicas favoritos em apenas alguns cliques.",
+                privacy: "Política de privacidade", terms: "Termos de uso", copyright: "© 2026 GrabVid. Todos os direitos reservados."
+            }
+        };
+        let currentLang = localStorage.getItem('grabvid_lang') || 'en';
+        let currentTheme = localStorage.getItem('grabvid_theme') || 'default';
+        function setLanguage(lang) {
+            if (!translations[lang]) return;
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) el.innerHTML = translations[lang][key];
+            });
+            document.documentElement.lang = lang;
+            document.getElementById('langLabel').textContent = { en:'English', ar:'العربية', ru:'Русский', fr:'Français', es:'Español', de:'Deutsch', zh:'中文', ja:'日本語', hi:'हिन्दी', pt:'Português' }[lang] || lang;
+            localStorage.setItem('grabvid_lang', lang);
+            closeAllModals();
+        }
+        function setTheme(theme) {
+            currentTheme = theme;
+            document.body.classList.remove('theme-default', 'theme-dark', 'theme-emerald', 'theme-purple', 'theme-sunset', 'theme-ocean', 'theme-rose', 'theme-gold', 'theme-midnight', 'theme-forest');
+            if (theme !== 'default') document.body.classList.add('theme-' + theme);
+            localStorage.setItem('grabvid_theme', theme);
+            closeAllModals();
+        }
+        function closeAllModals() {
+            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+        }
+        function loadPreferences() {
+            const savedLang = localStorage.getItem('grabvid_lang');
+            const savedTheme = localStorage.getItem('grabvid_theme');
+            if (savedLang && translations[savedLang]) setLanguage(savedLang);
+            else setLanguage('en');
+            if (savedTheme) setTheme(savedTheme);
+            else setTheme('default');
+        }
+        document.getElementById('langBtn').addEventListener('click', () => document.getElementById('languageModal').classList.add('active'));
+        document.getElementById('themeBtn').addEventListener('click', () => document.getElementById('themeModal').classList.add('active'));
+        document.getElementById('mobileLangBtn').addEventListener('click', () => document.getElementById('languageModal').classList.add('active'));
+        document.getElementById('mobileThemeBtn').addEventListener('click', () => document.getElementById('themeModal').classList.add('active'));
+        document.querySelectorAll('.lang-option').forEach(item => item.addEventListener('click', () => setLanguage(item.dataset.lang)));
+        document.querySelectorAll('.theme-card').forEach(card => card.addEventListener('click', () => setTheme(card.dataset.theme)));
+        document.getElementById('languageModalClose').addEventListener('click', closeAllModals);
+        document.getElementById('themeModalClose').addEventListener('click', closeAllModals);
+        document.querySelectorAll('.modal-overlay').forEach(overlay => overlay.addEventListener('click', (e) => { if (e.target === overlay) closeAllModals(); }));
+        const mobileMenu = document.getElementById('mobileMenu');
+        document.getElementById('hamburger').addEventListener('click', () => mobileMenu.classList.add('active'));
+        document.getElementById('mobileMenuClose').addEventListener('click', () => mobileMenu.classList.remove('active'));
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        loadPreferences();
+    </script>
+</body>
+</html>
